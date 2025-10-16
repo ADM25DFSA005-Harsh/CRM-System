@@ -1,0 +1,60 @@
+﻿@model CRMProject.Models.SupportTicket
+@{
+    ViewData["Title"] = "Add Ticket";
+}
+
+<h2>Support Tickets</h2>
+
+<a asp-action="DisplayTicketsInput" class="btn btn-primary mb-3">Add New Ticket</a>
+
+<form asp-action="DisplayTicketsInput" method="post" class="p-3 border rounded bg-light">
+    @Html.AntiForgeryToken()
+
+    <div class="mb-3">
+        <label asp-for="CustomerID" class="form-label"></label>
+        <input asp-for="CustomerID" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Issue" class="form-label"></label>
+        <input asp-for="Issue" class="form-control">
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="IssueDescription" class="form-label"></label>
+        <textarea asp-for="IssueDescription" class="form-control"></textarea>
+    </div>
+
+     <div class="mb-3">
+        <label asp-for="AssignedAgent" class="form-label"></label>
+        <input asp-for="AssignedAgent" class="form-control">
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Status" class="form-label"></label>
+        <input asp-for="Status" class="form-control">
+    </div>
+
+    @* <div class="mb-3">
+        <label asp-for="AssignedAgent" class="form-label"></label>
+        <select asp-for="AssignedAgent" class="form-control">
+            <option>Alice</option>
+            <option>Bob</option>
+            <option>Charlie</option>
+            <option>Diana</option>
+            <option>Ethan</option>
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Status" class="form-label"></label>
+        <select asp-for="Status" class="form-control">
+            <option>Open</option>
+            <option>Pending</option>
+            <option>Resolved</option>
+            <option>Closed</option>
+        </select>
+    </div> *@
+
+    <button type="submit" class="btn btn-success">Add Ticket</button>
+</form>

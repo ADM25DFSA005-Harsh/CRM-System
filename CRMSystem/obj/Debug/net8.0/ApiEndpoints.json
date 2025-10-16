@@ -1,0 +1,100 @@
+[
+  {
+    "ContainingType": "CRMSystem.Controllers.ReportApiController",
+    "Method": "GetMarketingDashboard",
+    "RelativePath": "api/ReportApi/marketing",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "type",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "status",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "scheduleType",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CRMSystem.Controllers.ReportApiController",
+    "Method": "GetMarketingFilters",
+    "RelativePath": "api/ReportApi/marketing/filters",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CRMSystem.Controllers.ReportApiController",
+    "Method": "GetSalesDashboard",
+    "RelativePath": "api/ReportApi/sales",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "salesStage",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "assignedRep",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CRMSystem.Controllers.ReportApiController",
+    "Method": "GetSalesFilters",
+    "RelativePath": "api/ReportApi/sales/filters",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CRMSystem.Controllers.ReportApiController",
+    "Method": "GetSupportDashboard",
+    "RelativePath": "api/ReportApi/support",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "status",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "agent",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CRMSystem.Controllers.ReportApiController",
+    "Method": "GetSupportFilters",
+    "RelativePath": "api/ReportApi/support/filters",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

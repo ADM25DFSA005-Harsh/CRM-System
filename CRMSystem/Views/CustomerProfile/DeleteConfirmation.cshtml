@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Delete Confirmation";
+}
+
+<div class="container mt-5 text-center">
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success">
+            <h4>@TempData["SuccessMessage"]</h4>
+        </div>
+    }
+
+    <a asp-action="CustomerProfile" asp-route-showRecords="true" class="btn btn-outline-primary mt-3">
+        Back to Customer Records
+    </a>
+</div>

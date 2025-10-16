@@ -1,0 +1,159 @@
+﻿@{
+
+    ViewData["Title"] = "Deals";
+
+}
+<link: https: //cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css
+ 
+@if (TempData["SuccessMessage"] != null)
+
+{
+<div class="alert alert-success">
+
+        @TempData["SuccessMessage"]
+</div>
+
+}
+ 
+@if (TempData["ErrorMessage"] != null)
+
+{
+<div class="alert alert-danger">
+
+            @TempData["ErrorMessage"]
+</div>
+
+}
+ 
+<div class="container mt-4">
+<h2 class="mb-4">Deals</h2>
+ 
+    <!-- Filters -->
+<form method="get" class="row g-3 mb-4">
+<div class="col-md-3">
+<select name="campaign" class="form-select">
+<option value="">Campaign</option>
+
+                @foreach (var campaign in ViewBag.CampaignList as List<SelectListItem>)
+
+                {
+<option value="@campaign.Value">@campaign.Text</option>
+
+                }
+</select>
+</div>
+<div class="col-md-3">
+<select name="stage" class="form-select">
+<option value="">Sales Stage</option>
+
+                @foreach (var stage in ViewBag.StageList as List<SelectListItem>)
+
+                {
+<option value="@stage.Value">@stage.Text</option>
+
+                }
+</select>
+</div>
+<div class="col-md-3">
+
+            @{
+
+                var selectedRep = Context.Request.Query["AssignedTo"].ToString(); // or "AssignedTo" if you keep that name
+
+            }
+ 
+            <select name="AssignedTo" class="form-select">
+<option value="">Assigned Rep</option>
+
+                @foreach (var rep in ViewBag.RepList as List<SelectListItem>)
+
+                {
+<option value="@rep.Value" selected="@(rep.Value == selectedRep ? "selected" : null)">
+
+                            @rep.Text
+</option>
+
+                }
+</select>
+
+            @* <select name="rep" class="form-select">
+<option value="">Assigned Rep</option>
+
+                @foreach (var rep in ViewBag.RepList as List<SelectListItem>)
+
+                {
+<option value="@rep.Value">@rep.Text</option>
+
+                }
+</select> *@
+</div>
+<div class="col-md-3">
+<button type="submit" class="btn btn-outline-primary w-100">Apply Filters</button>
+</div>
+</form>
+ 
+    <!-- Deals Table -->
+<div class="table-responsive mb-4">
+<table class="table table-bordered table-striped">
+<thead class="table-dark">
+<tr>
+<th>ID</th>
+<th>Customer Name</th>
+<th>Campaign Name</th>
+<th>Value</th>
+<th>Stage</th>
+<th>Closing Date</th>
+<th>Assigned Rep</th>
+</tr>
+</thead>
+<tbody>
+
+                @foreach (var deal in ViewBag.Deals)
+
+                {
+<tr>
+<td>@deal.OpportunityID</td>
+<td>@deal.CustomerName</td>
+<td>@deal.CampaignName</td>
+<td>@string.Format("{0:C}", deal.EstimatedValue)</td>
+<td class="text-center";>
+
+                        @if (deal.SalesStage == "Won")
+
+                        {
+<span class="badge bg-success px-10 py-9">@deal.SalesStage</span>
+
+                        }
+
+                        else if (deal.SalesStage == "Lost")
+
+                        {
+<span class="badge bg-danger px-10 py-9">@deal.SalesStage</span>
+
+                        }
+
+                        else
+
+                        {
+<form method="post" class="row g-3 mb-4" asp-action="UpdateStage">
+<input type = "hidden" name = "OpportunityID" value = "@deal.OpportunityID" />
+<select name = "SalesStage" class= "form-select form-select-sm" onchange = "this.form.submit()" >
+<option value = "Prospecting" selected = "@(deal.SalesStage == "Prospecting" ? "selected" : null)">Prospecting</option>
+<option value="Negotiation" selected="@(deal.SalesStage == "Negotiation" ? "selected" : null)">Negotiation</option>
+<option value="Won">Won</option>
+<option value="Lost">Lost</option>
+</select>
+</form>
+
+                        }
+</td>
+<td>@(deal.ClosingDate != null ? ((DateTime)deal.ClosingDate).ToString("dd-MM-yyyy") : "")</td>
+<td>@deal.AssignedRep</td>                    
+</tr>
+
+                }
+</tbody>
+</table>
+</div>
+</div>
+ 

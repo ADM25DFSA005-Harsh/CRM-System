@@ -1,0 +1,74 @@
+﻿@model IEnumerable<dynamic>
+@{
+    var types = ViewBag.CampaignTypes as List<string>;
+    var selected = ViewBag.SelectedType as string;
+    var top = ViewBag.TopCampaign;
+}
+
+<div class="container mt-4">
+    <h2 class="mb-4 text-primary">📊 Campaign Performance by Type</h2>
+
+    <form method="get" asp-action="CampaignPerformance" class="mb-3">
+        <div class="form-group row">
+            <label for="selectedType" class="col-sm-2 col-form-label font-weight-bold">Select Campaign Type:</label>
+            <div class="col-sm-6">
+                <select id="selectedType" name="selectedType" class="form-control" onchange="this.form.submit()">
+                    <option value="">-- Choose --</option>
+                    @foreach (var type in types)
+                    {
+                        if (type == selected)
+                        {
+                            <option value="@type" selected>@type</option>
+                        }
+                        else
+                        {
+                            <option value="@type">@type</option>
+                        }
+                    }
+                </select>
+            </div>
+        </div>
+    </form>
+
+    @if (top != null)
+    {
+        <div class="alert alert-success">
+             <strong>Top Campaign:</strong> @top.CampaignName with @top.TotalResponses responses
+        </div>
+    }
+
+    @if (Model.Any())
+    {
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover text-center align-middle">
+                <thead class="thead-dark">
+                    <tr>
+                        <th> Campaign Name</th>
+                        <th>Impressions</th>
+                        <th>Total Responses</th>
+                        <th>Average Rating</th>
+                       
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.CampaignName</td>
+                            <td>@item.Impressions</td>
+                            <td>@item.TotalResponses</td>
+                            <td>@(item.AverageRating?.ToString("0.00") ?? "N/A")</td>
+                            
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+    else if (!string.IsNullOrEmpty(selected))
+    {
+        <div class="alert alert-warning mt-3">
+            No campaigns found for <strong>@selected</strong>.
+        </div>
+    }
+</div>

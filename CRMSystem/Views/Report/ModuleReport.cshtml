@@ -1,0 +1,224 @@
+﻿@{
+    ViewData["Title"] = "CRM Dashboard";
+}
+
+<div class="container mt-4">
+    <h2 class="mb-4">CRM Dashboard</h2>
+
+    <!-- Module Selection -->
+    <div class="mb-3">
+        <label for="moduleSelect" class="form-label">Select Module:</label>
+        <select id="moduleSelect" class="form-select w-auto">
+            <option value="" disabled selected>Select module</option>
+            <option value="marketing">Marketing</option>
+            <option value="sales">Sales</option>
+            <option value="support">Support</option>
+        </select>
+    </div>
+
+    <!-- Filters -->
+    <div id="filters" class="mb-3">
+        <!-- Marketing Filters -->
+        <div id="marketingFilters">
+            <select id="typeFilter" class="form-select d-inline w-auto">
+                <option value="">All Types</option>
+                <option value="Chatbot Campaign">Chatbot Campaign</option>
+                <option value="Social Media Campaign">Social Media Campaign</option>
+                <option value="Email Campaign">Email Campaign</option>
+                <option value="Chatbot Campaign">Chatbot Campaign</option>
+                <option value="Direct Mail">Direct Mail</option>
+                <option value="Event-Based Campaign">Event-Based Campaign</option>
+                <option value="In-App Messaging">In-App Messaging</option>
+                <option value="Push Notification">Push Notification</option>
+                <option value="Video Campaign">Video Campaign</option>
+                <option value="Web Pop-Up/Banner">Web Pop-Up/Banner</option>
+                <option value="WhatsApp Campaign">WhatsApp Campaign</option>
+                <option value="SMS Campaign">SMS Campaign</option>
+            </select>
+            <select id="statusFilter" class="form-select d-inline w-auto">
+                <option value="">All Status</option>
+                <option value="Scheduled">Scheduled</option>
+                <option value="Active">Active</option>
+                <option value="Completed">Completed</option>
+            </select>
+            <select id="scheduleFilter" class="form-select d-inline w-auto">
+                <option value="">All Schedule</option>
+                <option value="Event-based">Event-based</option>
+                <option value="Recurring">Recurring</option>
+            </select>
+        </div>
+
+        <!-- Sales Filters -->
+        <div id="salesFilters" style="display:none;">
+            <select id="stageFilter" class="form-select d-inline w-auto">
+                <option value="">All Stages</option>
+                <option value="Prospecting">Prospecting</option>
+                <option value="Negotiation">Negotiation</option>
+                <option value="Won">Won</option>
+                <option value="Lost">Lost</option>
+            </select>
+            <select id="salesStatusFilter" class="form-select d-inline w-auto">
+                <option value="">All Agents</option>
+                <option value="John Doe">John Doe</option>
+                <option value="Jane Smith">Jane Smith</option>
+                <option value="Chris Green">Chris Green</option>
+                <option value="Ravi Kumar">Ravi Kumar</option>
+                <option value="Priya Menon">Priya Menon</option>
+                <option value="Anjali Sharma">Anjali Sharma</option>
+                <option value="Alex Brown">Alex Brown</option>
+            </select>
+        </div>
+
+        <!-- Support Filters -->
+        <div id="supportFilters" style="display:none;">
+            <select id="supportStatusFilter" class="form-select d-inline w-auto">
+                <option value="">All Status</option>
+                <option value="Pending">Pending</option>
+                <option value="Document Required">Document Required</option>
+                <option value="Resolved">Resolved</option>
+            </select>
+            <select id="agentFilter" class="form-select d-inline w-auto">
+                <option value="">All Agents</option>
+                <option value="Agent_Eshwar">Agent_Eshwar</option>
+                <option value="Agent_Charan">Agent_Charan</option>
+                <option value="Agent_Divya">Agent_Divya</option>
+                <option value="Agent_Fatima">Agent_Fatima</option>
+                <option value="Agent_Akash">Agent_Akash</option>
+            </select>
+        </div>
+
+        <button class="btn btn-primary" onclick="loadCharts()">Apply</button>
+    </div>
+
+    <!-- Charts -->
+    <div id="charts" class="row"></div>
+</div>
+
+@section Scripts {
+<script src = "https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    let charts = {};
+
+    // function renderChart(id, type, labels, data, colors) {
+    //     if (charts[id]) charts[id].destroy();
+    //     charts[id] = new Chart(document.getElementById(id), {
+    //         type: type,
+    //         data: {
+    //             labels: labels,
+    //             datasets: [{ data: data, backgroundColor: colors, borderColor: '#007bff' }]
+    //         }
+    //     });
+    //}
+    function renderChart(id, type, labels, data, colors, datasetLabel = '') {
+    if (charts[id]) charts[id].destroy();
+    charts[id] = new Chart(document.getElementById(id), {
+        type: type,
+        data: {
+            labels: labels,
+            datasets: [{
+                label: datasetLabel,
+                data: data,
+                backgroundColor: colors,
+                borderColor: '#007bff',
+                fill: false,
+                tension: 0.3
+            }]
+        }
+    });
+}
+
+    document.getElementById('moduleSelect').addEventListener('change', function() {
+        const module = this.value;
+        document.getElementById('marketingFilters').style.display = module === 'marketing' ? 'block' : 'none';
+        document.getElementById('salesFilters').style.display = module === 'sales' ? 'block' : 'none';
+        document.getElementById('supportFilters').style.display = module === 'support' ? 'block' : 'none';
+    });
+
+    function loadCharts() {
+        const module = document.getElementById('moduleSelect').value;
+        let url = `/api/ReportApi/${module}`;
+
+        if (module === 'marketing') {
+            const type = document.getElementById('typeFilter').value;
+            const status = document.getElementById('statusFilter').value;
+            const schedule = document.getElementById('scheduleFilter').value;
+            url += `?type=${encodeURIComponent(type)}&status=${encodeURIComponent(status)}&scheduleType=${encodeURIComponent(schedule)}`;
+        } else if (module === 'sales') {
+            const stage = document.getElementById('stageFilter').value;
+            const status = document.getElementById('salesStatusFilter').value;
+            url += `?salesStage=${encodeURIComponent(stage)}&AssignedRep=${encodeURIComponent(status)}`;
+        } else if (module === 'support') {
+            const status = document.getElementById('supportStatusFilter').value;
+            const agent = document.getElementById('agentFilter').value;
+            url += `?status=${encodeURIComponent(status)}&agent=${encodeURIComponent(agent)}`;
+        }
+
+    //     fetch(url)
+    // .then(res => res.json())
+    // .then(data => {
+    //     console.log("API Response:", data); ✅ Add this here
+
+    //     let chartHtml = '';
+    //     if (module === 'marketing' || module === 'sales') {
+    //         chartHtml = `
+    //             <div class="col-md-6 mb-4"><canvas id="${module}TypeChart"></canvas></div>
+    //             <div class="col-md-6 mb-4"><canvas id="${module}BudgetChart"></canvas></div>
+    //             <div class="col-md-6 mb-4"><canvas id="${module}StatusChart"></canvas></div>
+    //             <div class="col-md-6 mb-4"><canvas id="${module}TrendChart"></canvas></div>
+    //         `;
+    //     } else {
+    //         chartHtml = `
+    //             <div class="col-md-6 mb-4"><canvas id="${module}TypeChart"></canvas></div>
+    //             <div class="col-md-6 mb-4"><canvas id="${module}BudgetChart"></canvas></div>
+    //             <div class="col-md-6 mb-4"><canvas id="${module}StatusChart"></canvas></div>
+    //         `;
+    //     }
+    //     document.getElementById('charts').innerHTML = chartHtml;
+
+    //     renderChart(`${module}TypeChart`, 'bar', data.ByType.map(x => x.Label), data.ByType.map(x => x.Count), ['#007bff','#28a745','#ffc107','#dc3545']);
+    //     renderChart(`${module}BudgetChart`, 'pie', data.Budget.map(x => x.Label), data.Budget.map(x => x.Value || x.Count), ['#17a2b8','#6f42c1','#fd7e14','#20c997']);
+    //     renderChart(`${module}StatusChart`, 'doughnut', data.Status.map(x => x.Label), data.Status.map(x => x.Count), ['#007bff','#28a745','#ffc107','#dc3545']);
+    //     if (module !== 'support') {
+    //         renderChart(`${module}TrendChart`, 'line', data.Trend.map(x => `${x.Month}/${x.Year}`), data.Trend.map(x => x.Impressions || x.Revenue), ['#007bff']);
+    //     }
+    // })
+    // .catch(err => console.error("Fetch error:", err));
+
+        fetch(url)
+            .then(res => res.json())
+            .then(data => {
+
+                let chartHtml = '';
+                if (module === 'marketing' || module === 'sales') {
+                    chartHtml = `
+                        <div class="col-md-6 mb-4"><canvas id="${module}TypeChart"></canvas></div>
+                        <div class="col-md-6 mb-4"><canvas id="${module}BudgetChart"></canvas></div>
+                        <div class="col-md-6 mb-4"><canvas id="${module}StatusChart"></canvas></div>
+                        <div class="col-md-6 mb-4"><canvas id="${module}TrendChart"></canvas></div>
+                    `;
+                } else {
+                    chartHtml = `
+                        <div class="col-md-6 mb-4"><canvas id="${module}TypeChart"></canvas></div>
+                        <div class="col-md-6 mb-4"><canvas id="${module}BudgetChart"></canvas></div>
+                        <div class="col-md-6 mb-4"><canvas id="${module}StatusChart"></canvas></div>
+                    `;
+                }
+                document.getElementById('charts').innerHTML = chartHtml;
+
+                renderChart(`${module}TypeChart`, 'bar', data.byType.map(x => x.label), data.byType.map(x => x.count), ['#007bff','#28a745','#ffc107','#dc3545']);
+                renderChart(`${module}BudgetChart`, 'pie', data.budget.map(x => x.label), data.budget.map(x => x.value || x.count), ['#17a2b8','#6f42c1','#fd7e14','#20c997']);
+                renderChart(`${module}StatusChart`, 'doughnut', data.status.map(x => x.label), data.status.map(x => x.count), ['#007bff','#28a745','#ffc107','#dc3545']);
+                // if (module !== 'support') {
+                //     console.log(data.trend);
+                //     renderChart(`${module}TrendChart`, 'line', data.trend.map(x => x.label), data.trend.map(x => Object.values(x)[2]), ['#007bff']);
+                //     renderChart(`${module}TrendChart`, 'line', data.trend.map(x => `${x.Month}/${x.Year}`), data.trend.map(x => Object.values(x)[2]), ['#007bff']);
+                //     renderChart(`${module}TrendChart`, 'line', data.trend.map(x => `${x.Month}/${x.Year}`),data.trend.map(x => x.Impressions || x.Revenue), ['#007bff'],'Trend'); ✅ Added label
+
+                // }
+            });
+    }
+
+    // Initial load
+    loadCharts();
+</script>
+}

@@ -1,0 +1,249 @@
+﻿@model IEnumerable<CRM.Models.CustomerProfile>
+@using Microsoft.AspNetCore.Http
+
+@{
+    ViewData["Title"] = "CustomerProfile";
+    var showRecords = Context.Request.Query["showRecords"] == "true";
+    var userName = "Guest";
+}
+
+<style>
+    @@keyframes fadeSlide {
+        0% {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .animated {
+        animation: fadeSlide 0.8s ease forwards;
+        opacity: 0;
+    }
+
+    .delay-1 {
+        animation-delay: 0.2s;
+    }
+
+    .delay-2 {
+        animation-delay: 0.4s;
+    }
+
+    .delay-3 {
+        animation-delay: 0.6s;
+    }
+
+    .delay-4 {
+        animation-delay: 0.8s;
+    }
+
+    .primary-btn {
+        width: 100%;
+        color: #333;
+        background: linear-gradient(to bottom right, #ffffff, #f0f0f0);
+        border: 2px solid grey;
+        padding: 10px;
+        font-weight: 500;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        outline: none;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+        .primary-btn:hover {
+            background-color: #e0e0e0;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+    .search-box {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+
+        .search-box form {
+            display: flex;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .search-box input[type="text"] {
+            flex: 1;
+            padding: 12px 16px;
+            border: 2px solid grey;
+            border-radius: 12px;
+            font-size: 16px;
+            color: #333;
+            background-color: #ffffffcc;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+            .search-box input[type="text"]:focus {
+                border-color: #888;
+                box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+                outline: none;
+            }
+
+        .search-box button {
+            margin-left: 10px;
+            padding: 12px 20px;
+            border: 2px solid grey;
+            border-radius: 12px;
+            background-color: #333;
+            color: white;
+            font-weight: 500;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+            .search-box button:hover {
+                background-color: #555;
+                box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+            }
+
+    .tips-box {
+        background-color: #fefefe;
+        border: 1px solid #ccc;
+        padding: 15px;
+        margin-top: 30px;
+    }
+
+    .alert-success, .alert-danger {
+        margin-bottom: 20px;
+        padding: 12px;
+        border-radius: 8px;
+        text-align: center;
+    }
+
+    .alert-success {
+        background-color: #d4edda;
+        color: #155724;
+        border: 1px solid #c3e6cb;
+    }
+
+    .alert-danger {
+        background-color: #f8d7da;
+        color: #721c24;
+        border: 1px solid #f5c6cb;
+    }
+</style>
+
+<div class="container mt-5">
+    @if (!showRecords)
+    {
+        <!-- Welcome Section -->
+        <div class="row mb-3 animated delay-1">
+            <div class="col-12 text-center">
+                <h1 class="display-5 mb-4">Welcome, @userName!</h1>
+                <p class="lead">Manage your customer records with ease.</p>
+            </div>
+        </div>
+
+        <div class="row mb-3 animated delay-2">
+            <div class="col-md-6 offset-md-3">
+                <a asp-controller="CustomerProfile" asp-action="CustomerProfile" asp-route-showRecords="true" class="btn primary-btn">View Records</a>
+            </div>
+        </div>
+
+        <div class="row mb-3 animated delay-3">
+            <div class="col-md-6 offset-md-3">
+                <a asp-action="TakeInput" class="btn primary-btn">Add New Customer</a>
+            </div>
+        </div>
+
+        <div class="row animated delay-4">
+            <div class="col-md-8 offset-md-2">
+                <div class="tips-box">
+                    <h5>Quick Tips</h5>
+                    <ul>
+                        <li>Use "Add New Customer" to onboard clients.</li>
+                        <li>Click "View Records" to see all entries.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    }
+    else
+    {
+        @*Success/Error Messages*@
+        @if (TempData["SuccessMessage"] != null)
+        {
+            <div class="alert-success">@TempData["SuccessMessage"]</div>
+        }
+        @if (TempData["ErrorMessage"] != null)
+        {
+            <div class="alert-danger">@TempData["ErrorMessage"]</div>
+        }
+
+        @*Records Section*@
+        <div class="row mb-4">
+            <div class="col-12 text-center">
+                <h2>Customer Records</h2>
+            </div>
+        </div>
+
+        <div class="search-box">
+            <form asp-action="CustomerProfile" method="get">
+                <input type="hidden" name="showRecords" value="true" />
+                <input type="text" name="searchTerm" placeholder="🔍 Search by name, email, or region" />
+                <button type="submit">Search</button>
+            </form>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped align-middle">
+                <thead class="table-dark text-center">
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.First().CustomerID)</th>
+                        <th>@Html.DisplayNameFor(model => model.First().Name)</th>
+                        <th>@Html.DisplayNameFor(model => model.First().DateOfBirth)</th>
+                        <th>@Html.DisplayNameFor(model => model.First().Email)</th>
+                        <th>@Html.DisplayNameFor(model => model.First().PhoneNumber)</th>
+                        <th>@Html.DisplayNameFor(model => model.First().Address)</th>
+                        <th>@Html.DisplayNameFor(model => model.First().Region)</th>
+                        <th>@Html.DisplayNameFor(model => model.First().JoinDate)</th>
+                        <th>@Html.DisplayNameFor(model => model.First().PurchaseHistory)</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.CustomerID</td>
+                            <td>@item.Name</td>
+                            <td>@item.DateOfBirth</td>
+                            <td>@item.Email</td>
+                            <td>@item.PhoneNumber</td>
+                            <td>@item.Address</td>
+                            <td>@item.Region</td>
+                            <td>
+                                @{
+                                    string formattedDate = "N/A";
+                                    if (!string.IsNullOrWhiteSpace(item.JoinDate) &&
+                                    DateTime.TryParse(item.JoinDate, out DateTime parsedDate))
+                                    {
+                                        formattedDate = parsedDate.ToString("dd-MM-yyyy");
+                                    }
+                                }
+                                @formattedDate
+                            </td>
+                            <td>@item.PurchaseHistory</td>
+                            <td class="text-center">
+                                <a asp-action="Edit" asp-route-id="@item.CustomerID" class="btn btn-sm btn-outline-primary me-1">Edit</a>
+                                <a asp-action="DeleteData" asp-route-id="@item.CustomerID" class="btn btn-sm btn-outline-danger"
+                                   onclick="return confirm('Are you sure you want to delete @item.Name?');">Delete</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+</div>

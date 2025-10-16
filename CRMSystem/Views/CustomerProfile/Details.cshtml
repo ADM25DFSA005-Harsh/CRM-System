@@ -1,0 +1,40 @@
+﻿@model CRM.Models.CustomerProfile
+
+<h2>Customer Details</h2>
+
+<div>
+    <dl class="row">
+        <dt class="col-sm-3">@Html.DisplayNameFor(m => m.CustomerID)</dt>
+        <dd class="col-sm-9">@Model.CustomerID</dd>
+
+        <dt class="col-sm-3">@Html.DisplayNameFor(m => m.Name)</dt>
+        <dd class="col-sm-9">@Model.Name</dd>
+
+        <dt class="col-sm-3">@Html.DisplayNameFor(m => m.DateOfBirth)</dt>
+        <dd class="col-sm-9">@Model.DateOfBirth</dd>
+
+        <dt class="col-sm-3">@Html.DisplayNameFor(m => m.Email)</dt>
+        <dd class="col-sm-9">@Model.Email</dd>
+
+        <dt class="col-sm-3">@Html.DisplayNameFor(m => m.Region)</dt>
+        <dd class="col-sm-9">@Model.Region</dd>
+
+        <dt class="col-sm-3">@Html.DisplayNameFor(m => m.PhoneNumber)</dt>
+        <dd class="col-sm-9">@Model.PhoneNumber</dd>
+
+        <dt class="col-sm-3">@Html.DisplayNameFor(m => m.Address)</dt>
+        <dd class="col-sm-9">@Model.Address</dd>
+
+        <dt class="col-sm-3">@Html.DisplayNameFor(m => m.JoinDate)</dt>
+        <dd class="col-sm-9">@Model.JoinDate</dd>
+
+        <dt class="col-sm-3">@Html.DisplayNameFor(m => m.PurchaseHistory)</dt>
+        <dd class="col-sm-9">@Model.PurchaseHistory</dd>
+    </dl>
+</div>
+
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.CustomerID" class="btn btn-primary">Edit</a>
+    <a asp-action="DeleteData" asp-route-id="@Model.CustomerID" class="btn btn-danger">Delete</a>
+    <a asp-action="CustomerProfile" asp-route-showRecords="true" class="btn btn-secondary">Back to list</a>
+</div>

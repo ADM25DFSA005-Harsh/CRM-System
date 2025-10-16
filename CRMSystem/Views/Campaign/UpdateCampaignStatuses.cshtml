@@ -1,0 +1,67 @@
+﻿@{
+    ViewBag.Title = "Auto Update Campaign Statuses";
+    var types = ViewBag.Types as List<string> ?? new List<string>();
+    var updatedCampaigns = ViewBag.UpdatedCampaigns as List<(string Name, string PreviousStatus, string NewStatus)> ?? new List<(string, string, string)>();
+    var message = TempData["Message"] as string;
+}
+
+<div class="container mt-5">
+    <h2 class="text-center fw-bold mb-4">🔄 Auto Update Campaign Statuses</h2>
+
+    <form method="get" asp-action="UpdateCampaignStatuses" class="row g-3 align-items-end mb-4">
+        <div class="col-md-6">
+            <label for="type" class="form-label">Campaign Type</label>
+            <select name="type" id="type" class="form-select">
+                <option value="">-- Select Type --</option>
+                @foreach (var t in types)
+                {
+                    <option value="@t">@t</option>
+                }
+            </select>
+        </div>
+        <div class="col-md-6 d-grid">
+            <button type="submit" class="btn btn-primary">Update Statuses</button>
+        </div>
+    </form>
+
+    @if (!string.IsNullOrEmpty(message))
+    {
+        <div class="alert alert-success text-center fw-semibold">@message</div>
+    }
+
+    @if (updatedCampaigns.Any())
+    {
+        <h5 class="fw-bold mt-4 mb-3">📋 Updated Campaigns</h5>
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover text-center align-middle">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Campaign Name</th>
+                        <th>Previous Status</th>
+                        <th>Updated Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var c in updatedCampaigns)
+                    {
+                        <tr>
+                            <td class="fw-semibold">@c.Name</td>
+                            <td>
+                                <span class="badge bg-secondary">@c.PreviousStatus</span>
+                            </td>
+                            <td>
+                                <span class="badge bg-success">@c.NewStatus</span>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+    else if (!string.IsNullOrEmpty(message))
+    {
+        <div class="alert alert-info text-center mt-3">
+            No campaigns were updated for the selected type.
+        </div>
+    }
+</div>

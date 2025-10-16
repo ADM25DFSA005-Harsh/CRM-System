@@ -1,0 +1,105 @@
+﻿@model MarketingAutomation.Models.Campaign
+@{
+    ViewData["Title"] = "Track Campaigns";
+    var sectionValue = ViewBag.Section as string;
+    var campaigns = ViewBag.Campaigns as List<MarketingAutomation.Models.Campaign>;
+}
+
+<div class="container mt-5">
+    <h2 class="fw-bold text-center mb-4">Track Campaigns</h2>
+
+    <form asp-action="TrackCampaigns" method="post">
+        @Html.AntiForgeryToken()
+
+        <div class="row g-3 justify-content-center mb-4">
+            <div class="col-md-3">
+                <button name="section" value="today" class="btn btn-outline-dark w-100">Today’s Campaigns</button>
+            </div>
+            <div class="col-md-3">
+                <button name="section" value="upcoming" class="btn btn-outline-dark w-100">Upcoming Campaigns</button>
+            </div>
+            <div class="col-md-3">
+                <button name="section" value="completed" class="btn btn-outline-dark w-100">Completed Campaigns</button>
+            </div>
+        </div>
+
+        <div class="row g-3 justify-content-center mb-5">
+            <div class="col-md-3">
+                <select name="status" class="form-select">
+                    <option value="">-- Status --</option>
+                    <option>Scheduled</option>
+                    <option>Active</option>
+                    <option>Completed</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <select name="type" class="form-select">
+                    <option value="">-- Type --</option>
+                    <option>Email Campaign</option>
+                    <option>SMS Campaign</option>
+                    <option>Social Media Campaign</option>
+                    <option>Push Notification</option>
+                    <option>WhatsApp Campaign</option>
+                    <option>Voice Call Campaign</option>
+                    <option>Web Pop-Up / Banner</option>
+                    <option>Direct Mail</option>
+                    <option>Chatbot Campaign</option>
+                    <option>Video Campaign</option>
+                    <option>Event-Based Campaign</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <button name="section" value="filter" class="btn btn-outline-dark w-100">Filter</button>
+            </div>
+        </div>
+    </form>
+
+    @if (!string.IsNullOrEmpty(sectionValue))
+    {
+        <h4 class="text-center mb-3">Showing: <span class="text-capitalize">@sectionValue Campaigns</span></h4>
+
+        @if (campaigns == null || !campaigns.Any())
+        {
+            <div class="alert alert-info text-center">No campaigns found.</div>
+        }
+        else
+        {
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover text-center align-middle">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Campaign Name</th>
+                            <th>Type</th>
+                            <th>Status</th>
+                            <th>Budget (₹)</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                            <th>Impressions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var campaign in campaigns)
+                        {
+                            <tr>
+                                <td class="fw-semibold">@campaign.CampaignName</td>
+                                <td>@campaign.Type</td>
+                                <td>
+                                    <span class="badge bg-@(
+                                        campaign.Status == "Active" ? "success" :
+                                        campaign.Status == "Scheduled" ? "info" :
+                                        campaign.Status == "Completed" ? "dark" :
+                                        "secondary"
+                                    )">@campaign.Status</span>
+                                </td>
+                                <td>₹@campaign.Budget.ToString("N2")</td>
+                                <td>@campaign.StartDate.ToString("dd MMM yyyy")</td>
+                                <td>@campaign.EndDate.ToString("dd MMM yyyy")</td>
+                                <td>@campaign.Impressions</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        }
+    }
+</div>

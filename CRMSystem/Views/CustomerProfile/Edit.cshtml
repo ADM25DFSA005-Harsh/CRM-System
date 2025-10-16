@@ -1,0 +1,98 @@
+﻿@model CRM.Models.CustomerProfile
+
+@{
+    ViewData["Title"] = "Edit Customer";
+}
+
+<h2 class="mb-4">Edit Customer</h2>
+
+<form asp-action="Edit" autocomplete="off">
+    <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+    <div class="form-group mb-3">
+        <label asp-for="CustomerID" class="form-label"></label>
+        <input asp-for="CustomerID" class="form-control" readonly />
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="Name" class="form-label"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="Address" class="form-label"></label>
+        <input asp-for="Address" class="form-control" />
+        <span asp-validation-for="Address" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="Email" class="form-label"></label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="PhoneNumber" class="form-label"></label>
+        <input asp-for="PhoneNumber" class="form-control" />
+        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="Region" class="form-label"></label>
+        <select asp-for="Region" class="form-control">
+            <option value="">-- Select Region --</option>
+            <option>North</option>
+            <option>South</option>
+            <option>East</option>
+            <option>West</option>
+            <option>Central</option>
+            <option>Chennai</option>
+            <option>Tamil Nadu</option>
+            <option>Kerala</option>
+            <option>Karnataka</option>
+            <option>Delhi</option>
+            <option>Mumbai</option>
+            <option>Hyderabad</option>
+        </select>
+        <span asp-validation-for="Region" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="JoinDate" class="form-label"></label>
+        <input asp-for="JoinDate" class="form-control" type="date" max="@DateTime.Today.ToString("yyyy-MM-dd")" />
+        <span asp-validation-for="JoinDate" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="DateOfBirth" class="form-label"></label>
+        <input asp-for="DateOfBirth" class="form-control" type="date" max="@DateTime.Today.ToString("yyyy-MM-dd")" />
+        <span asp-validation-for="DateOfBirth" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-4">
+        <label asp-for="PurchaseHistory" class="form-label"></label>
+        <select asp-for="PurchaseHistory" class="form-control">
+            <option value="">-- Select Purchase Type --</option>
+            <option>Apartment</option>
+            <option>Villa</option>
+            <option>Independent House</option>
+            <option>Studio</option>
+            <option>Penthouse</option>
+            <option>Farmhouse</option>
+            <option>Plot/Land</option>
+            <option>Commercial Space</option>
+            <option>Retail Shop</option>
+            <option>Office</option>
+            <option>Other</option>
+        </select>
+        <span asp-validation-for="PurchaseHistory" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+    <a asp-action="CustomerProfile" asp-route-showRecords="true" class="btn btn-secondary ms-2">Cancel</a>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
