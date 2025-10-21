@@ -1,4 +1,4 @@
-﻿@model CRMProject.Models.SupportTicket
+@model CRMProject.Models.SupportTicket
 @{
     ViewData["Title"] = "Edit Ticket";
 }
@@ -16,16 +16,23 @@
 
     <div class="mb-3">
         <label asp-for="AssignedAgent" class="form-label"></label>
-        <input asp-for="AssignedAgent" class="form-control" />
+        @* <input asp-for="AssignedAgent" class="form-control" /> *@
+        <select asp-for="AssignedAgent" class="form-control">
+            <option>Agent_Charan</option>
+            <option>Agent_Divya</option>
+            <option>Agent_Eshwar</option>
+            <option>Agent_Fatima</option>
+            <option>Agent_Vijay</option>
+        </select>
+
     </div>
 
     <div class="mb-3">
         <label asp-for="Status" class="form-label"></label>
         <select asp-for="Status" class="form-control">
-            <option>Open</option>
-            <option>Pending</option>
             <option>Resolved</option>
-            <option>Closed</option>
+            <option>Pending</option>
+            <option>Documents Required</option>
         </select>
     </div>
 
