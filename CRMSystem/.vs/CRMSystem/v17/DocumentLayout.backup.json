@@ -1,0 +1,833 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|c:\\users\\2438718\\onedrive - cognizant\\documents\\crm project\\crmsystem\\crmsystem\\data\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|solutionrelative:crmsystem\\data\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|c:\\users\\2438718\\onedrive - cognizant\\documents\\crm project\\crmsystem\\crmsystem\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|solutionrelative:crmsystem\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|c:\\users\\2438718\\onedrive - cognizant\\documents\\crm project\\crmsystem\\crmsystem\\controllers\\salescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|solutionrelative:crmsystem\\controllers\\salescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|c:\\users\\2438718\\onedrive - cognizant\\documents\\crm project\\crmsystem\\crmsystem\\controllers\\campaigncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|solutionrelative:crmsystem\\controllers\\campaigncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|c:\\users\\2438718\\onedrive - cognizant\\documents\\crm project\\crmsystem\\crmsystem\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|solutionrelative:crmsystem\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|c:\\users\\2438718\\onedrive - cognizant\\documents\\crm project\\crmsystem\\crmsystem\\controllers\\customerprofilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|solutionrelative:crmsystem\\controllers\\customerprofilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|c:\\users\\2438718\\onedrive - cognizant\\documents\\crm project\\crmsystem\\crmsystem\\models\\customerprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|solutionrelative:crmsystem\\models\\customerprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|c:\\users\\2438718\\onedrive - cognizant\\documents\\crm project\\crmsystem\\crmsystem\\data\\crmdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|solutionrelative:crmsystem\\data\\crmdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Migrations\\20251105062004_CustomerUpdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CRMSystem\\Migrations\\20251105062004_CustomerUpdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|c:\\users\\2438718\\onedrive - cognizant\\documents\\crm project\\crmsystem\\crmsystem\\controllers\\customersupportcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|solutionrelative:crmsystem\\controllers\\customersupportcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|c:\\users\\2438718\\onedrive - cognizant\\documents\\crm project\\crmsystem\\crmsystem\\controllers\\reportapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|solutionrelative:crmsystem\\controllers\\reportapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|c:\\users\\2438718\\onedrive - cognizant\\documents\\crm project\\crmsystem\\crmsystem\\controllers\\reportcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|solutionrelative:crmsystem\\controllers\\reportcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|c:\\users\\2438718\\onedrive - cognizant\\documents\\crm project\\crmsystem\\crmsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|solutionrelative:crmsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|c:\\users\\2438718\\onedrive - cognizant\\documents\\crm project\\crmsystem\\crmsystem\\areas\\identity\\pages\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|solutionrelative:crmsystem\\areas\\identity\\pages\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|c:\\users\\2438718\\onedrive - cognizant\\documents\\crm project\\crmsystem\\crmsystem\\views\\report\\modulereport.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|solutionrelative:crmsystem\\views\\report\\modulereport.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|c:\\users\\2438718\\onedrive - cognizant\\documents\\crm project\\crmsystem\\crmsystem\\views\\sales\\salesoverview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|solutionrelative:crmsystem\\views\\sales\\salesoverview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|c:\\users\\2438718\\onedrive - cognizant\\documents\\crm project\\crmsystem\\crmsystem\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|solutionrelative:crmsystem\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|c:\\users\\2438718\\onedrive - cognizant\\documents\\crm project\\crmsystem\\crmsystem\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|solutionrelative:crmsystem\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|c:\\users\\2438718\\onedrive - cognizant\\documents\\crm project\\crmsystem\\crmsystem\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|solutionrelative:crmsystem\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|c:\\users\\2438718\\onedrive - cognizant\\documents\\crm project\\crmsystem\\crmsystem\\views\\report\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|solutionrelative:crmsystem\\views\\report\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|c:\\users\\2438718\\onedrive - cognizant\\documents\\crm project\\crmsystem\\crmsystem\\models\\report.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|solutionrelative:crmsystem\\models\\report.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|c:\\users\\2438718\\onedrive - cognizant\\documents\\crm project\\crmsystem\\crmsystem\\views\\customerprofile\\displayprofiles.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|solutionrelative:crmsystem\\views\\customerprofile\\displayprofiles.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|c:\\users\\2438718\\onedrive - cognizant\\documents\\crm project\\crmsystem\\crmsystem\\views\\customerprofile\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|solutionrelative:crmsystem\\views\\customerprofile\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|c:\\users\\2438718\\onedrive - cognizant\\documents\\crm project\\crmsystem\\crmsystem\\views\\sales\\leadslist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|solutionrelative:crmsystem\\views\\sales\\leadslist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|c:\\users\\2438718\\onedrive - cognizant\\documents\\crm project\\crmsystem\\crmsystem\\views\\sales\\leaddetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|solutionrelative:crmsystem\\views\\sales\\leaddetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|c:\\users\\2438718\\onedrive - cognizant\\documents\\crm project\\crmsystem\\crmsystem\\views\\sales\\editlead.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|solutionrelative:crmsystem\\views\\sales\\editlead.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|c:\\users\\2438718\\onedrive - cognizant\\documents\\crm project\\crmsystem\\crmsystem\\views\\sales\\dealslist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|solutionrelative:crmsystem\\views\\sales\\dealslist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|c:\\users\\2438718\\onedrive - cognizant\\documents\\crm project\\crmsystem\\crmsystem\\views\\sales\\createlead.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|solutionrelative:crmsystem\\views\\sales\\createlead.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|c:\\users\\2438718\\onedrive - cognizant\\documents\\crm project\\crmsystem\\crmsystem\\views\\campaign\\managecampaign.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|solutionrelative:crmsystem\\views\\campaign\\managecampaign.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|c:\\users\\2438718\\onedrive - cognizant\\documents\\crm project\\crmsystem\\crmsystem\\views\\customersupport\\viewticket.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|solutionrelative:crmsystem\\views\\customersupport\\viewticket.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|c:\\users\\2438718\\onedrive - cognizant\\documents\\crm project\\crmsystem\\crmsystem\\views\\customersupport\\displayintableform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|solutionrelative:crmsystem\\views\\customersupport\\displayintableform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|c:\\users\\2438718\\onedrive - cognizant\\documents\\crm project\\crmsystem\\crmsystem\\views\\customersupport\\displayticketsinput.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|solutionrelative:crmsystem\\views\\customersupport\\displayticketsinput.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|c:\\users\\2438718\\onedrive - cognizant\\documents\\crm project\\crmsystem\\crmsystem\\views\\campaign\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|solutionrelative:crmsystem\\views\\campaign\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/CRMDatabase/True/SqlTable/dbo.AspNetUserRoles.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/CRMDatabase/True/SqlTable/dbo.AspNetRoles.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/CRMDatabase/True/SqlTable/dbo.AspNetUsers.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/CRMDatabase/True/SqlTable/dbo.AspNetUserLogins.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/CRMDatabase/True/SqlTable/dbo.AspNetUserClaims.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/CRMDatabase/True/SqlTable/dbo.AspNetRoleClaims.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|c:\\users\\2438718\\onedrive - cognizant\\documents\\crm project\\crmsystem\\crmsystem\\scaffoldingreadme.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|solutionrelative:crmsystem\\scaffoldingreadme.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|c:\\users\\2438718\\onedrive - cognizant\\documents\\crm project\\crmsystem\\crmsystem\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|solutionrelative:crmsystem\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|c:\\users\\2438718\\onedrive - cognizant\\documents\\crm project\\crmsystem\\crmsystem\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|solutionrelative:crmsystem\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|c:\\users\\2438718\\onedrive - cognizant\\documents\\crm project\\crmsystem\\crmsystem\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|solutionrelative:crmsystem\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|c:\\users\\2438718\\onedrive - cognizant\\documents\\crm project\\crmsystem\\crmsystem\\areas\\identity\\pages\\account\\logout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|solutionrelative:crmsystem\\areas\\identity\\pages\\account\\logout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|c:\\users\\2438718\\onedrive - cognizant\\documents\\crm project\\crmsystem\\crmsystem\\areas\\identity\\pages\\account\\roletest.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|solutionrelative:crmsystem\\areas\\identity\\pages\\account\\roletest.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\2438718\\.nuget\\packages\\microsoft.net.test.sdk\\17.14.1\\build\\net8.0\\Microsoft.NET.Test.Sdk.Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|c:\\users\\2438718\\onedrive - cognizant\\documents\\crm project\\crmsystem\\crmsystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|solutionrelative:crmsystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|c:\\users\\2438718\\onedrive - cognizant\\documents\\crm project\\crmsystem\\crmsystem\\crmsystem.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|solutionrelative:crmsystem\\crmsystem.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|c:\\users\\2438718\\onedrive - cognizant\\documents\\crm project\\crmsystem\\crmsystem\\areas\\identity\\pages\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|solutionrelative:crmsystem\\areas\\identity\\pages\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|c:\\users\\2438718\\onedrive - cognizant\\documents\\crm project\\crmsystem\\crmsystem\\areas\\identity\\pages\\account\\logout.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|solutionrelative:crmsystem\\areas\\identity\\pages\\account\\logout.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|c:\\users\\2438718\\onedrive - cognizant\\documents\\crm project\\crmsystem\\crmsystem\\areas\\identity\\pages\\account\\forgotpassword.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|solutionrelative:crmsystem\\areas\\identity\\pages\\account\\forgotpassword.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|c:\\users\\2438718\\onedrive - cognizant\\documents\\crm project\\crmsystem\\crmsystem\\migrations\\20251105070523_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44073541-CCAC-49C4-8406-AE0E4019D055}|CRMSystem\\CRMSystem.csproj|solutionrelative:crmsystem\\migrations\\20251105070523_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "20251105062004_CustomerUpdate.cs",
+              "DocumentMoniker": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Migrations\\20251105062004_CustomerUpdate.cs",
+              "RelativeDocumentMoniker": "CRMSystem\\Migrations\\20251105062004_CustomerUpdate.cs",
+              "ToolTip": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Migrations\\20251105062004_CustomerUpdate.cs",
+              "RelativeToolTip": "CRMSystem\\Migrations\\20251105062004_CustomerUpdate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-05T06:20:05.236Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DbInitializer.cs",
+              "DocumentMoniker": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Data\\DbInitializer.cs",
+              "RelativeDocumentMoniker": "CRMSystem\\Data\\DbInitializer.cs",
+              "ToolTip": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Data\\DbInitializer.cs",
+              "RelativeToolTip": "CRMSystem\\Data\\DbInitializer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T06:38:52.936Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SalesController.cs",
+              "DocumentMoniker": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Controllers\\SalesController.cs",
+              "RelativeDocumentMoniker": "CRMSystem\\Controllers\\SalesController.cs",
+              "ToolTip": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Controllers\\SalesController.cs",
+              "RelativeToolTip": "CRMSystem\\Controllers\\SalesController.cs",
+              "ViewState": "AgIAAOsAAAAAAAAAAADgv7QAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-13T03:46:57.727Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\appsettings.json",
+              "RelativeDocumentMoniker": "CRMSystem\\appsettings.json",
+              "ToolTip": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\appsettings.json",
+              "RelativeToolTip": "CRMSystem\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-22T04:38:47.03Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CampaignController.cs",
+              "DocumentMoniker": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Controllers\\CampaignController.cs",
+              "RelativeDocumentMoniker": "CRMSystem\\Controllers\\CampaignController.cs",
+              "ToolTip": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Controllers\\CampaignController.cs",
+              "RelativeToolTip": "CRMSystem\\Controllers\\CampaignController.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAQwFcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-10T04:19:57.674Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "CRMSystem\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "CRMSystem\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAYwCcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-30T07:01:50.669Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CustomerProfile.cs",
+              "DocumentMoniker": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Models\\CustomerProfile.cs",
+              "RelativeDocumentMoniker": "CRMSystem\\Models\\CustomerProfile.cs",
+              "ToolTip": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Models\\CustomerProfile.cs",
+              "RelativeToolTip": "CRMSystem\\Models\\CustomerProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-09T06:44:59.927Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CustomerProfileController.cs",
+              "DocumentMoniker": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Controllers\\CustomerProfileController.cs",
+              "RelativeDocumentMoniker": "CRMSystem\\Controllers\\CustomerProfileController.cs",
+              "ToolTip": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Controllers\\CustomerProfileController.cs",
+              "RelativeToolTip": "CRMSystem\\Controllers\\CustomerProfileController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-10T05:40:06.601Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CrmDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Data\\CrmDbContext.cs",
+              "RelativeDocumentMoniker": "CRMSystem\\Data\\CrmDbContext.cs",
+              "ToolTip": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Data\\CrmDbContext.cs",
+              "RelativeToolTip": "CRMSystem\\Data\\CrmDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-10T04:08:46.629Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "20251105070523_initialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Migrations\\20251105070523_initialCreate.cs",
+              "RelativeDocumentMoniker": "CRMSystem\\Migrations\\20251105070523_initialCreate.cs",
+              "ToolTip": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Migrations\\20251105070523_initialCreate.cs",
+              "RelativeToolTip": "CRMSystem\\Migrations\\20251105070523_initialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-05T07:05:24.56Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CustomerSupportController.cs",
+              "DocumentMoniker": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Controllers\\CustomerSupportController.cs",
+              "RelativeDocumentMoniker": "CRMSystem\\Controllers\\CustomerSupportController.cs",
+              "ToolTip": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Controllers\\CustomerSupportController.cs",
+              "RelativeToolTip": "CRMSystem\\Controllers\\CustomerSupportController.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAewBsAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-10T04:38:28.282Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ReportController.cs",
+              "DocumentMoniker": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Controllers\\ReportController.cs",
+              "RelativeDocumentMoniker": "CRMSystem\\Controllers\\ReportController.cs",
+              "ToolTip": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Controllers\\ReportController.cs",
+              "RelativeToolTip": "CRMSystem\\Controllers\\ReportController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwB0AAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-10T05:01:18.072Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ReportApiController.cs",
+              "DocumentMoniker": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Controllers\\ReportApiController.cs",
+              "RelativeDocumentMoniker": "CRMSystem\\Controllers\\ReportApiController.cs",
+              "ToolTip": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Controllers\\ReportApiController.cs",
+              "RelativeToolTip": "CRMSystem\\Controllers\\ReportApiController.cs",
+              "ViewState": "AgIAAKkAAAAAAAAAAAAlwMYAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T07:09:18.483Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "SalesOverview.cshtml",
+              "DocumentMoniker": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Views\\Sales\\SalesOverview.cshtml",
+              "RelativeDocumentMoniker": "CRMSystem\\Views\\Sales\\SalesOverview.cshtml",
+              "ToolTip": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Views\\Sales\\SalesOverview.cshtml",
+              "RelativeToolTip": "CRMSystem\\Views\\Sales\\SalesOverview.cshtml",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAUwFMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-13T03:53:38.095Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Program.cs",
+              "RelativeDocumentMoniker": "CRMSystem\\Program.cs",
+              "ToolTip": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Program.cs",
+              "RelativeToolTip": "CRMSystem\\Program.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAgwC4AAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-22T05:09:00.356Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ModuleReport.cshtml",
+              "DocumentMoniker": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Views\\Report\\ModuleReport.cshtml",
+              "RelativeDocumentMoniker": "CRMSystem\\Views\\Report\\ModuleReport.cshtml",
+              "ToolTip": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Views\\Report\\ModuleReport.cshtml",
+              "RelativeToolTip": "CRMSystem\\Views\\Report\\ModuleReport.cshtml",
+              "ViewState": "AgIAAMkAAAAAAAAAAAAUwNYAAABlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-09T05:34:49.294Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Login.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "RelativeDocumentMoniker": "CRMSystem\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "ToolTip": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "RelativeToolTip": "CRMSystem\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "ViewState": "AgIAAH8AAAAAAAAAAAAgwJUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-10T08:40:39.829Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Register.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "RelativeDocumentMoniker": "CRMSystem\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "ToolTip": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "RelativeToolTip": "CRMSystem\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T04:10:29.879Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "CRMSystem\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "ToolTip": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "RelativeToolTip": "CRMSystem\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-01T07:17:27.232Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "CRMSystem\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeToolTip": "CRMSystem\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEoAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-25T04:09:15.575Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Dashboard.cshtml",
+              "DocumentMoniker": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Views\\Report\\Dashboard.cshtml",
+              "RelativeDocumentMoniker": "CRMSystem\\Views\\Report\\Dashboard.cshtml",
+              "ToolTip": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Views\\Report\\Dashboard.cshtml",
+              "RelativeToolTip": "CRMSystem\\Views\\Report\\Dashboard.cshtml",
+              "ViewState": "AgIAABwAAAAAAAAAAABBwCEAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-29T06:39:07.791Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Report.cs",
+              "DocumentMoniker": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Models\\Report.cs",
+              "RelativeDocumentMoniker": "CRMSystem\\Models\\Report.cs",
+              "ToolTip": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Models\\Report.cs",
+              "RelativeToolTip": "CRMSystem\\Models\\Report.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAgwAgAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-22T04:43:53.019Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Views\\Campaign\\Index.cshtml",
+              "RelativeDocumentMoniker": "CRMSystem\\Views\\Campaign\\Index.cshtml",
+              "ToolTip": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Views\\Campaign\\Index.cshtml",
+              "RelativeToolTip": "CRMSystem\\Views\\Campaign\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-10T08:45:01.199Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Views\\CustomerProfile\\Details.cshtml",
+              "RelativeDocumentMoniker": "CRMSystem\\Views\\CustomerProfile\\Details.cshtml",
+              "ToolTip": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Views\\CustomerProfile\\Details.cshtml",
+              "RelativeToolTip": "CRMSystem\\Views\\CustomerProfile\\Details.cshtml",
+              "ViewState": "AgIAACMAAAAAAAAAAEBVwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-13T12:19:12.336Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "DisplayProfiles.cshtml",
+              "DocumentMoniker": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Views\\CustomerProfile\\DisplayProfiles.cshtml",
+              "RelativeDocumentMoniker": "CRMSystem\\Views\\CustomerProfile\\DisplayProfiles.cshtml",
+              "ToolTip": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Views\\CustomerProfile\\DisplayProfiles.cshtml",
+              "RelativeToolTip": "CRMSystem\\Views\\CustomerProfile\\DisplayProfiles.cshtml",
+              "ViewState": "AgIAAIUAAAAAAAAAAEBVwJUAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-13T12:24:23.388Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "CreateLead.cshtml",
+              "DocumentMoniker": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Views\\Sales\\CreateLead.cshtml",
+              "RelativeDocumentMoniker": "CRMSystem\\Views\\Sales\\CreateLead.cshtml",
+              "ToolTip": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Views\\Sales\\CreateLead.cshtml",
+              "RelativeToolTip": "CRMSystem\\Views\\Sales\\CreateLead.cshtml",
+              "ViewState": "AgIAAFIAAAAAAAAAAEBVwHMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-13T03:49:51.824Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "DealsList.cshtml",
+              "DocumentMoniker": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Views\\Sales\\DealsList.cshtml",
+              "RelativeDocumentMoniker": "CRMSystem\\Views\\Sales\\DealsList.cshtml",
+              "ToolTip": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Views\\Sales\\DealsList.cshtml",
+              "RelativeToolTip": "CRMSystem\\Views\\Sales\\DealsList.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJ4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-13T03:50:04.535Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "EditLead.cshtml",
+              "DocumentMoniker": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Views\\Sales\\EditLead.cshtml",
+              "RelativeDocumentMoniker": "CRMSystem\\Views\\Sales\\EditLead.cshtml",
+              "ToolTip": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Views\\Sales\\EditLead.cshtml",
+              "RelativeToolTip": "CRMSystem\\Views\\Sales\\EditLead.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-13T03:50:37.511Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "LeadDetails.cshtml",
+              "DocumentMoniker": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Views\\Sales\\LeadDetails.cshtml",
+              "RelativeDocumentMoniker": "CRMSystem\\Views\\Sales\\LeadDetails.cshtml",
+              "ToolTip": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Views\\Sales\\LeadDetails.cshtml",
+              "RelativeToolTip": "CRMSystem\\Views\\Sales\\LeadDetails.cshtml",
+              "ViewState": "AgIAAOkBAAAAAAAAAAAIwP8BAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-13T03:51:06.784Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "LeadsList.cshtml",
+              "DocumentMoniker": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Views\\Sales\\LeadsList.cshtml",
+              "RelativeDocumentMoniker": "CRMSystem\\Views\\Sales\\LeadsList.cshtml",
+              "ToolTip": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Views\\Sales\\LeadsList.cshtml",
+              "RelativeToolTip": "CRMSystem\\Views\\Sales\\LeadsList.cshtml",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAIwGYAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-13T03:52:50.166Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "ManageCampaign.cshtml",
+              "DocumentMoniker": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Views\\Campaign\\ManageCampaign.cshtml",
+              "RelativeDocumentMoniker": "CRMSystem\\Views\\Campaign\\ManageCampaign.cshtml",
+              "ToolTip": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Views\\Campaign\\ManageCampaign.cshtml",
+              "RelativeToolTip": "CRMSystem\\Views\\Campaign\\ManageCampaign.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-10T08:45:51.289Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "DisplayTicketsInput.cshtml",
+              "DocumentMoniker": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Views\\CustomerSupport\\DisplayTicketsInput.cshtml",
+              "RelativeDocumentMoniker": "CRMSystem\\Views\\CustomerSupport\\DisplayTicketsInput.cshtml",
+              "ToolTip": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Views\\CustomerSupport\\DisplayTicketsInput.cshtml",
+              "RelativeToolTip": "CRMSystem\\Views\\CustomerSupport\\DisplayTicketsInput.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-10T08:45:14.9Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "DisplayInTableForm.cshtml",
+              "DocumentMoniker": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Views\\CustomerSupport\\DisplayInTableForm.cshtml",
+              "RelativeDocumentMoniker": "CRMSystem\\Views\\CustomerSupport\\DisplayInTableForm.cshtml",
+              "ToolTip": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Views\\CustomerSupport\\DisplayInTableForm.cshtml",
+              "RelativeToolTip": "CRMSystem\\Views\\CustomerSupport\\DisplayInTableForm.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-10T08:45:18.57Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "ViewTicket.cshtml",
+              "DocumentMoniker": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Views\\CustomerSupport\\ViewTicket.cshtml",
+              "RelativeDocumentMoniker": "CRMSystem\\Views\\CustomerSupport\\ViewTicket.cshtml",
+              "ToolTip": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Views\\CustomerSupport\\ViewTicket.cshtml",
+              "RelativeToolTip": "CRMSystem\\Views\\CustomerSupport\\ViewTicket.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-10T08:45:28.934Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "dbo.AspNetUserRoles.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/CRMDatabase/True/SqlTable/dbo.AspNetUserRoles.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/CRMDatabase/True/SqlTable/dbo.AspNetUserRoles.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-10-06T05:17:12.584Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "dbo.AspNetUserLogins.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/CRMDatabase/True/SqlTable/dbo.AspNetUserLogins.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/CRMDatabase/True/SqlTable/dbo.AspNetUserLogins.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-10-06T04:36:54.62Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "dbo.AspNetUsers.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/CRMDatabase/True/SqlTable/dbo.AspNetUsers.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/CRMDatabase/True/SqlTable/dbo.AspNetUsers.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-10-06T05:17:01.035Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "dbo.AspNetRoles.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/CRMDatabase/True/SqlTable/dbo.AspNetRoles.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/CRMDatabase/True/SqlTable/dbo.AspNetRoles.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-10-06T05:17:09.244Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "dbo.AspNetRoleClaims.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/CRMDatabase/True/SqlTable/dbo.AspNetRoleClaims.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/CRMDatabase/True/SqlTable/dbo.AspNetRoleClaims.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-10-06T04:36:59.133Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "dbo.AspNetUserClaims.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/CRMDatabase/True/SqlTable/dbo.AspNetUserClaims.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/CRMDatabase/True/SqlTable/dbo.AspNetUserClaims.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-10-06T04:40:13.602Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "CRMSystem\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "CRMSystem\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-01T08:57:36.309Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "ScaffoldingReadMe.txt",
+              "DocumentMoniker": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\ScaffoldingReadMe.txt",
+              "RelativeDocumentMoniker": "CRMSystem\\ScaffoldingReadMe.txt",
+              "ToolTip": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\ScaffoldingReadMe.txt",
+              "RelativeToolTip": "CRMSystem\\ScaffoldingReadMe.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-09-22T10:02:00.044Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "CRMSystem\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Properties\\launchSettings.json",
+              "RelativeToolTip": "CRMSystem\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-01T11:20:52.598Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "_LoginPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeDocumentMoniker": "CRMSystem\\Views\\Shared\\_LoginPartial.cshtml",
+              "ToolTip": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeToolTip": "CRMSystem\\Views\\Shared\\_LoginPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-25T04:26:27.947Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "CRMSystem.csproj",
+              "DocumentMoniker": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\CRMSystem.csproj",
+              "RelativeDocumentMoniker": "CRMSystem\\CRMSystem.csproj",
+              "ToolTip": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\CRMSystem.csproj",
+              "RelativeToolTip": "CRMSystem\\CRMSystem.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-09-25T04:22:52.827Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "Logout.cshtml",
+              "DocumentMoniker": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
+              "RelativeDocumentMoniker": "CRMSystem\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
+              "ToolTip": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
+              "RelativeToolTip": "CRMSystem\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-25T04:26:57.074Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "RoleTest.cshtml",
+              "DocumentMoniker": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Areas\\Identity\\Pages\\Account\\RoleTest.cshtml",
+              "RelativeDocumentMoniker": "CRMSystem\\Areas\\Identity\\Pages\\Account\\RoleTest.cshtml",
+              "ToolTip": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Areas\\Identity\\Pages\\Account\\RoleTest.cshtml",
+              "RelativeToolTip": "CRMSystem\\Areas\\Identity\\Pages\\Account\\RoleTest.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-29T04:31:30.37Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "Microsoft.NET.Test.Sdk.Program.cs",
+              "DocumentMoniker": "C:\\Users\\2438718\\.nuget\\packages\\microsoft.net.test.sdk\\17.14.1\\build\\net8.0\\Microsoft.NET.Test.Sdk.Program.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\.nuget\\packages\\microsoft.net.test.sdk\\17.14.1\\build\\net8.0\\Microsoft.NET.Test.Sdk.Program.cs",
+              "ToolTip": "C:\\Users\\2438718\\.nuget\\packages\\microsoft.net.test.sdk\\17.14.1\\build\\net8.0\\Microsoft.NET.Test.Sdk.Program.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\.nuget\\packages\\microsoft.net.test.sdk\\17.14.1\\build\\net8.0\\Microsoft.NET.Test.Sdk.Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T09:37:52.077Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "bootstrap-grid.css.map",
+              "DocumentMoniker": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+              "RelativeDocumentMoniker": "CRMSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+              "ToolTip": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+              "RelativeToolTip": "CRMSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAA/8gIAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-09-25T08:52:13.941Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Areas\\Identity\\Pages\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "CRMSystem\\Areas\\Identity\\Pages\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Areas\\Identity\\Pages\\_ViewImports.cshtml",
+              "RelativeToolTip": "CRMSystem\\Areas\\Identity\\Pages\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-25T04:17:26.373Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "Logout.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Areas\\Identity\\Pages\\Account\\Logout.cshtml.cs",
+              "RelativeDocumentMoniker": "CRMSystem\\Areas\\Identity\\Pages\\Account\\Logout.cshtml.cs",
+              "ToolTip": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Areas\\Identity\\Pages\\Account\\Logout.cshtml.cs",
+              "RelativeToolTip": "CRMSystem\\Areas\\Identity\\Pages\\Account\\Logout.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T04:10:07.325Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "ForgotPassword.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Areas\\Identity\\Pages\\Account\\ForgotPassword.cshtml.cs",
+              "RelativeDocumentMoniker": "CRMSystem\\Areas\\Identity\\Pages\\Account\\ForgotPassword.cshtml.cs",
+              "ToolTip": "C:\\Users\\2438718\\OneDrive - Cognizant\\Documents\\CRM Project\\CRMSystem\\CRMSystem\\Areas\\Identity\\Pages\\Account\\ForgotPassword.cshtml.cs",
+              "RelativeToolTip": "CRMSystem\\Areas\\Identity\\Pages\\Account\\ForgotPassword.cshtml.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAawAoAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T04:09:33.988Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

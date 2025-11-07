@@ -1,0 +1,346 @@
+﻿@model MarketingAutomation.Models.Campaign
+@{
+    ViewData["Title"] = "Manage Campaigns";
+    var actionType = ViewBag.ActionType as string;
+    var campaigns = ViewBag.Campaigns as List<MarketingAutomation.Models.Campaign>;
+    var selected = Model;
+
+}
+
+<div class="container mt-5">
+    <h2 class="fw-bold text-center mb-4">Manage Campaigns</h2>
+
+    <form asp-action="ManageCampaign" method="post">
+        @Html.AntiForgeryToken()
+
+        <div class="row g-3 justify-content-center mb-4">
+            <div class="col-md-4 m-3">
+                <button name="actionType" value="create" class="btn btn-outline-success w-100">Create Campaign</button>
+            </div>
+            <div class="col-md-4 m-3">
+                <button name="actionType" value="edit" class="btn btn-outline-warning w-100">Edit Campaign</button>
+            </div>
+            <div class="col-md-4 m-3">
+                <button name="actionType" value="delete" class="btn btn-outline-danger w-100">Delete Campaign</button>
+            </div>
+            <div class="col-md-4 m-3">
+                <button name="actionType" value="view" class="btn btn-outline-primary w-100">View Campaigns</button>
+            </div>
+        </div>
+
+       @if (actionType == "edit" || actionType == "delete")
+        {
+            <form asp-action="ManageCampaign" method="post">
+                @Html.AntiForgeryToken()
+                <input type="hidden" name="actionType" value="@actionType" />
+
+                <div class="row justify-content-center">
+                    <div class="col-md-4 mb-3">
+                        <label for="campaignId" class="form-label">Campaign ID</label>
+                        <input type="number" name="campaignId" class="form-control"  />
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <button type="submit" class="btn btn-dark px-4">Load Campaign</button>
+                </div>
+            </form>
+        }
+
+        @if (TempData["Message"] != null)
+        {
+        <div id="statusMessage" class="alert alert-success text-center" role="alert">
+            @TempData["Message"]
+        </div>
+
+        <script>
+            setTimeout(function () {
+                var msg = document.getElementById('statusMessage');
+                if (msg) {
+                    msg.style.display = 'none';
+                }
+            }, 4000);
+        </script>
+    }
+    </form>
+
+    @if (actionType == "view")
+    {
+    <h4 class="text-center mb-4 fw-bold">All Campaigns</h4>
+
+    @if (campaigns != null && campaigns.Any())
+    {
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover text-center align-middle">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Campaign ID</th>
+                        <th>Campaign Name</th>
+                        <th>Type</th>
+                        <th>Status</th>
+                        <th>Budget (₹)</th>
+                        <th>Start Date</th>
+                        <th>End Date</th>
+                        <th>Impressions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var c in campaigns)
+                    {
+                        <tr>
+                            <td>@c.CampaignID</td>
+                            <td class="fw-semibold">@c.CampaignName</td>
+                            <td>@c.Type</td>
+                            <td>
+                                <span class="badge bg-@(
+                                    c.Status == "Active" ? "success" :
+                                    c.Status == "Scheduled" ? "info" :
+                                    c.Status == "Completed" ? "dark" :
+                                    "warning"
+                                )">@c.Status</span>
+                            </td>
+                            <td>₹@c.Budget.ToString("N2")</td>
+                            <td>@c.StartDate.ToString("dd MMM yyyy")</td>
+                            <td>@c.EndDate.ToString("dd MMM yyyy")</td>
+                            <td>@c.Impressions</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-warning text-center">
+            No campaigns found.
+        </div>
+    }
+}
+
+    @if (actionType == "create")
+    {
+        <div class="container py-5">
+    <h2 class="text-center fw-bold mb-4">Create Campaign</h2>
+
+    
+
+    @Html.ValidationSummary(true, "", new { @class = "text-danger mb-3" })
+
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <form asp-action="Create" method="post">
+                        @Html.AntiForgeryToken()
+
+                        <div class="mb-3">
+                            <label asp-for="CampaignName" class="form-label">Campaign Name</label>
+                            <input asp-for="CampaignName" class="form-control" />
+                            <span asp-validation-for="CampaignName" class="text-danger"></span>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="StartDate" class="form-label">Start Date</label>
+                                <input asp-for="StartDate" class="form-control" type="datetime-local"
+                                value="@Model.StartDate.ToString("yyyy-MM-dd")"/>
+                                <span asp-validation-for="StartDate" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="EndDate" class="form-label">End Date</label>
+                                <input asp-for="EndDate" class="form-control" type="datetime-local" 
+                                value="@Model.StartDate.ToString("yyyy-MM-dd")"/>
+                                <span asp-validation-for="EndDate" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Type" class="form-label">Type</label>
+                            <select asp-for="Type" class="form-select">
+                                <option value="">-- Select Type --</option>
+                                <option>Email Campaign</option>
+                                <option>SMS Campaign</option>
+                                <option>Social Media Campaign</option>
+                                <option>Push Notification</option>
+                                <option>In-App Messaging</option>
+                                <option>WhatsApp Campaign</option>
+                                <option>Voice Call Campaign</option>
+                                <option>Web Pop-Up / Banner</option>
+                                <option>Direct Mail</option>
+                                <option>Chatbot Campaign</option>
+                                <option>Video Campaign</option>
+                                <option>Event-Based Campaign</option>
+                            </select>
+                            <span asp-validation-for="Type" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Status" class="form-label">Status</label>
+                            <select asp-for="Status" class="form-select">
+                                <option value="">-- Select Status --</option>
+                                <option>Scheduled</option>
+                                <option>Active</option>
+                                <option>Completed</option>
+                            </select>
+                            <span asp-validation-for="Status" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Budget" class="form-label">Budget</label>
+                            <input asp-for="Budget" class="form-control" type="number" step="0.01" />
+                            <span asp-validation-for="Budget" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="ScheduleType" class="form-label">Schedule Type</label>
+                            <select asp-for="ScheduleType" class="form-select">
+                                <option value="">-- Select Schedule Type --</option>
+                                <option>One-time</option>
+                                <option>Recurring</option>
+                                <option>Event-based</option>
+                            </select>
+                            <span asp-validation-for="ScheduleType" class="text-danger"></span>
+                        </div>
+
+                        <div class="d-flex justify-content-center mt-4">
+                            <button type="submit" class="btn btn-dark px-5">Create</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            @section Scripts {
+                @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+            }
+        </div>
+    </div>
+</div>
+
+        
+    }
+
+     @if (actionType == "edit" && selected != null && selected.CampaignID != 0)
+        {
+            <div class="container py-5">
+                <h2 class="text-center fw-bold mb-4">Edit Campaign</h2>
+
+                @Html.ValidationSummary(true, "", new { @class = "text-danger mb-3" })
+
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <form asp-action="EditCampaign" method="post">
+                                    @Html.AntiForgeryToken()
+                                    <input type="hidden" asp-for="CampaignID" />
+
+                                    <div class="mb-3">
+                                        <label asp-for="CampaignName" class="form-label">Campaign Name</label>
+                                        <input asp-for="CampaignName" class="form-control" />
+                                        <span asp-validation-for="CampaignName" class="text-danger"></span>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label asp-for="StartDate" class="form-label">Start Date</label>
+                                            <input asp-for="StartDate" class="form-control" type="datetime-local"/>
+                                            <span asp-validation-for="StartDate" class="text-danger"></span>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label asp-for="EndDate" class="form-label">End Date</label>
+                                            <input asp-for="EndDate" class="form-control" type="datetime-local"/>
+                                            <span asp-validation-for="EndDate" class="text-danger"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label asp-for="Type" class="form-label">Type</label>
+                                        <select asp-for="Type" class="form-select">
+                                            <option value="">-- Select Type --</option>
+                                            <option value="">-- Select Type --</option>
+                                            <option>Email Campaign</option>
+                                            <option>SMS Campaign</option>
+                                            <option>Social Media Campaign</option>
+                                            <option>Push Notification</option>
+                                            <option>In-App Messaging</option>
+                                            <option>WhatsApp Campaign</option>
+                                            <option>Voice Call Campaign</option>
+                                            <option>Web Pop-Up / Banner</option>
+                                            <option>Direct Mail</option>
+                                            <option>Chatbot Campaign</option>
+                                            <option>Video Campaign</option>
+                                            <option>Event-Based Campaign</option>
+                                        </select>
+                                        <span asp-validation-for="Type" class="text-danger"></span>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label asp-for="Status" class="form-label">Status</label>
+                                        <select asp-for="Status" class="form-select">
+                                            <option value="">-- Select Status --</option>
+                                            <option selected="@selected.Status == "Scheduled"">Scheduled</option>
+                                            <option selected="@selected.Status == "Active"">Active</option>
+                                            <option selected="@selected.Status == "Completed"">Completed</option>
+                                        </select>
+                                        <span asp-validation-for="Status" class="text-danger"></span>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label asp-for="Budget" class="form-label">Budget</label>
+                                        <input asp-for="Budget" class="form-control" type="number" step="0.01"  />
+                                        <span asp-validation-for="Budget" class="text-danger"></span>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label asp-for="ScheduleType" class="form-label">Schedule Type</label>
+                                        <select asp-for="ScheduleType" class="form-select">
+                                            <option value="">-- Select Schedule Type --</option>
+                                            <option selected="@selected.ScheduleType == "One-time"">One-time</option>
+                                            <option selected="@selected.ScheduleType == "Recurring"">Recurring</option>
+                                            <option selected="@selected.ScheduleType == "Event-based"">Event-based</option>
+                                        </select>
+                                        <span asp-validation-for="ScheduleType" class="text-danger"></span>
+                                    </div>
+
+                                    <div class="d-flex justify-content-center mt-4">
+                                        <button type="submit" class="btn btn-warning px-5">Update</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+
+
+    @if (actionType == "delete" && selected != null && selected.CampaignID != 0)
+    {
+        <div class="container py-5">
+            <h2 class="text-center fw-bold mb-4 text-danger">Delete Campaign</h2>
+
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="card border-danger shadow-sm">
+                        <div class="card-body text-center">
+                            <p class="mb-3">Are you sure you want to delete the following campaign?</p>
+
+                            <h5 class="text-danger">@selected.CampaignName</h5>
+                            <p><strong>Type:</strong> @selected.Type</p>
+                            <p><strong>Status:</strong> @selected.Status</p>
+                            <p><strong>Budget:</strong> ₹@selected.Budget.ToString("F2")</p>
+                            <p><strong>Schedule:</strong> @selected.ScheduleType</p>
+                            <p><strong>Start:</strong> @selected.StartDate.ToString("dd MMM yyyy hh:mm tt")</p>
+                            <p><strong>End:</strong> @selected.EndDate.ToString("dd MMM yyyy hh:mm tt")</p>
+
+                            <form asp-action="DeleteEntry" method="post">
+                                @Html.AntiForgeryToken()
+                                <input type="hidden" name="campaignId" value="@selected.CampaignID" />
+                                <button type="submit" class="btn btn-danger px-4 mt-3">Confirm Delete</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        }
+</div>

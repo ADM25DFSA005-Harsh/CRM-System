@@ -1,0 +1,131 @@
+﻿@model CRM.Models.CustomerProfile
+
+@{
+    ViewData["Title"] = "Add New Customer";
+}
+
+<style>
+    .alert-success {
+        margin-top: 20px;
+        padding: 12px 20px;
+        background-color: #d4edda;
+        border: 1px solid #c3e6cb;
+        color: #155724;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .form-section {
+        padding-top: 20px;
+    }
+</style>
+
+<div class="form-section">
+    <h1>Add New Customer</h1>
+    <hr />
+
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert-success text-center">
+            @TempData["SuccessMessage"]
+        </div>
+    }
+
+    <form asp-action="TakeInput" autocomplete="off">
+        <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+        <div class="row">
+            <!-- LEFT COLUMN -->
+            <div class="col-md-6">
+                <div class="form-group mb-3">
+                    <label asp-for="Name" class="form-label"></label>
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="DateOfBirth" class="form-label">Date of Birth</label>
+                    <input asp-for="DateOfBirth" class="form-control" type="date" max="@DateTime.Today.ToString("yyyy-MM-dd")" />
+                    <span asp-validation-for="DateOfBirth" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="Address" class="form-label"></label>
+                    <input asp-for="Address" class="form-control" />
+                    <span asp-validation-for="Address" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="PhoneNumber" class="form-label"></label>
+                    <input asp-for="PhoneNumber" class="form-control" />
+                    <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                </div>
+            </div>
+
+            @*RIGHT COLUMN*@
+            <div class="col-md-6">
+                <div class="form-group mb-3">
+                    <label asp-for="Email" class="form-label"></label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="Region" class="form-label"></label>
+                    <select asp-for="Region" class="form-control">
+                        <option value="">-- Select Region --</option>
+                        <option>North</option>
+                        <option>South</option>
+                        <option>East</option>
+                        <option>West</option>
+                        <option>Central</option>
+                        <option>Chennai</option>
+                        <option>Tamil Nadu</option>
+                        <option>Kerala</option>
+                        <option>Karnataka</option>
+                        <option>Delhi</option>
+                        <option>Mumbai</option>
+                        <option>Hyderabad</option>
+                    </select>
+                    <span asp-validation-for="Region" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="JoinDate" class="form-label"></label>
+                    <input asp-for="JoinDate" class="form-control" type="date" max="@DateTime.Today.ToString("yyyy-MM-dd")" />
+                    <span asp-validation-for="JoinDate" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="PurchaseHistory" class="form-label">Purchase Type</label>
+                    <select asp-for="PurchaseHistory" class="form-control">
+                        <option value="">-- Select Purchase Type --</option>
+                        <option>Apartment</option>
+                        <option>Villa</option>
+                        <option>Independent House</option>
+                        <option>Studio</option>
+                        <option>Penthouse</option>
+                        <option>Farmhouse</option>
+                        <option>Plot/Land</option>
+                        <option>Commercial Space</option>
+                        <option>Retail Shop</option>
+                        <option>Office</option>
+                        <option>Other</option>
+                    </select>
+                    <span asp-validation-for="PurchaseHistory" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-12 text-center">
+                <input type="submit" id="btnClick" value="Add Customer" class="btn btn-primary px-5 me-2" />
+                <a asp-action="CustomerProfile" asp-route-showRecords="true" class="btn btn-secondary">Cancel</a>
+            </div>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

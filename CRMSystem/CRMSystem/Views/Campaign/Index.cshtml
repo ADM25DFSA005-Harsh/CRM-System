@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewData["Title"] = "Home";
+}
+ 
+<div class="container mt-5 text-center">
+    <h2 class="fw-bold">Marketing Automation </h2>
+ 
+    <div class="row mt-4 justify-content-center">
+ 
+        <div class="col-md-4 m-3">
+            <a asp-controller="Campaign" asp-action="ManageCampaign" class="btn btn-outline-dark w-100 p-3">
+                <i class="bi bi-kanban"></i> Manage Campaigns
+            </a>
+        </div>
+ 
+        <div class="col-md-4 m-3">
+            <a asp-controller="Campaign" asp-action="TrackCampaigns" class="btn btn-outline-dark w-100 p-3">
+                <i class="bi bi-check-circle"></i> Track Campaigns 
+            </a>
+        </div>
+ 
+        <div class="col-md-4 m-3">
+            <a asp-controller="Campaign" asp-action="Budget" class="btn btn-outline-dark w-100 p-3">
+                <i class="bi bi-wallet2"></i> Budget
+            </a>
+        </div>
+        <div class="col-md-4 m-3">
+            <a asp-controller="Campaign" asp-action="CampaignPerformance" class="btn btn-outline-dark w-100 p-3">
+                <i class="bi bi-graph-up"></i> Campaign Performance
+            </a>
+        </div>
+    </div>
+</div>
+ 
+<!-- Add Bootstrap Icons if not already included -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+ 

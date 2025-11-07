@@ -1,0 +1,32 @@
+﻿@model IEnumerable<MarketingAutomation.Models.Campaign>
+
+<h2>All Campaigns</h2>
+<a asp-action="Create" class="btn btn-primary mb-3">Create New Campaign</a>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Status</th>
+            <th>Budget</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var c in Model)
+        {
+            <tr>
+                <td>@c.CampaignName</td>
+                <td>@c.Type</td>
+                <td>@c.Status</td>
+                <td>@c.Budget</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@c.CampaignID" class="btn btn-info btn-sm">Details</a>
+                    <a asp-action="Edit" asp-route-id="@c.CampaignID" class="btn btn-warning btn-sm">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@c.CampaignID" class="btn btn-danger btn-sm">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

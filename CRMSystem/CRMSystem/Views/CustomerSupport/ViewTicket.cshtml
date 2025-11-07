@@ -1,0 +1,17 @@
+﻿@model CRMProject.Models.SupportTicket
+@{
+    ViewData["Title"] = "View Ticket";
+}
+
+<h2>Ticket Details</h2>
+
+<div class="card p-4 bg-light">
+    <h5><strong>Customer ID:</strong> @Model.CustomerID</h5>
+    <h5><strong>Assigned Agent:</strong> @Model.AssignedAgent</h5>
+    <h5><strong>Status:</strong> @Model.Status</h5>
+    <hr />
+    <h5><strong>Issue Description:</strong></h5>
+    <p class="mt-2">@Model.IssueDescription</p>
+</div>
+
+<a asp-action="DisplayInTableForm" class="btn btn-secondary mt-3">Back to Tickets</a>

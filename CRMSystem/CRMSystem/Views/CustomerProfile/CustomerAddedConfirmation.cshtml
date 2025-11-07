@@ -1,0 +1,90 @@
+﻿@model CRM.Models.CustomerProfile
+
+@{
+    ViewData["Title"] = "Customer Added Confirmation";
+}
+
+<style>
+    @@keyframes fadeSlide {
+        0% {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .confirmation-container {
+        max-width: 700px;
+        margin: 50px auto;
+        padding: 30px;
+        background-color: #fefefe;
+        border-radius: 12px;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+        animation: fadeSlide 0.8s ease forwards;
+    }
+
+    .confirmation-header {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+        .confirmation-header h2 {
+            color: #155724;
+        }
+
+    .confirmation-details p {
+        font-size: 16px;
+        margin: 8px 0;
+    }
+
+    .btn-redirect {
+        display: block;
+        margin: 30px auto 0;
+        padding: 12px 24px;
+        background-color: #333;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-weight: 500;
+        text-align: center;
+        text-decoration: none;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+        .btn-redirect:hover {
+            background-color: #555;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+        }
+</style>
+
+<div class="confirmation-container">
+    <div class="confirmation-header">
+        <h2>@TempData["SuccessMessage"]</h2>
+        <p class="lead">Here are the details of the newly added customer:</p>
+    </div>
+
+    <div class="confirmation-details">
+        <p><strong>ID:</strong> @Model.CustomerID</p>
+        <p><strong>Name:</strong> @Model.Name</p>
+        <p><strong>Date of Birth:</strong> @Model.DateOfBirth ?? "N/A"</p>
+        <p><strong>Email:</strong> @Model.Email</p>
+        <p><strong>Phone No:</strong> @Model.PhoneNumber</p>
+        <p><strong>Address:</strong> @Model.Address</p>
+        <p><strong>Region:</strong> @Model.Region</p>
+        <p><strong>Join Date:</strong> @Model.JoinDate ?? "N/A"</p>
+        <p><strong>Purchase History:</strong> @Model.PurchaseHistory</p>
+    </div>
+
+    <a asp-action="CustomerProfile" asp-route-showRecords="true" class="btn-redirect">Go to Customer Records</a>
+</div>
+
+<script>
+    setTimeout(function () {
+        window.location.href = '@Url.Action("CustomerProfile", new { showRecords = true })';
+    }, 5000); // Redirect after 5 seconds
+</script>

@@ -1,0 +1,102 @@
+﻿@{
+    var campaignTypes = ViewBag.CampaignTypes as IEnumerable<dynamic> ?? new List<dynamic>();
+    var campaignsInType = ViewBag.CampaignsInType as IEnumerable<dynamic> ?? new List<dynamic>();
+    var selectedCampaign = ViewBag.SelectedCampaign;
+    var selectedType = ViewBag.SelectedType as string ?? "";
+    var selectedDate = ViewBag.SelectedDate as DateTime?;
+}
+
+<div class="container mt-5">
+    <h2 class="text-center fw-bold mb-4">Budget Overview</h2>
+
+    <form method="get" asp-action="Budget" class="row g-4 mb-4">
+        <div class="col-md-4">
+            <label class="form-label">Campaign Type</label>
+            <select name="selectedType" class="form-select" onchange="this.form.submit()">
+                <option value="">-- Select Type --</option>
+                @foreach (var item in campaignTypes)
+                {
+                    <option value="@item.Type" selected="@(item.Type == selectedType)">
+                        @item.Type
+                    </option>
+                }
+            </select>
+
+            @if (!string.IsNullOrEmpty(selectedType))
+            {
+                var selectedTypeBudget = campaignTypes
+                    .FirstOrDefault(t => t.Type == selectedType)?.TotalBudget ?? 0;
+
+                <div class="mt-2 text-dark fw-bold">
+                    Total Budget for <span class="text-dark">"@selectedType"</span>: ₹@selectedTypeBudget.ToString("N2")
+                </div>
+            }
+        </div>
+
+        @if (campaignsInType.Any())
+        {
+            <div class="col-md-4">
+                <label class="form-label">Select Campaign</label>
+                <select name="selectedCampaignId" class="form-select" onchange="this.form.submit()">
+                    <option value="">-- Select Campaign --</option>
+                    @foreach (var campaign in campaignsInType)
+                    {
+                        <option value="@campaign.CampaignID" selected="@(selectedCampaign?.CampaignID == campaign.CampaignID)">
+                            @campaign.CampaignName
+                        </option>
+                    }
+                </select>
+            </div>
+        }
+
+        @if (selectedCampaign != null)
+        {
+            var startDate = (DateTime)selectedCampaign.StartDate;
+            var endDate = (DateTime)selectedCampaign.EndDate;
+
+            <div class="col-md-4">
+                <label class="form-label">Select Date (within campaign)</label>
+                <input type="date" name="selectedDate" class="form-control"
+                       min="@startDate.ToString("yyyy-MM-dd")"
+                       max="@endDate.ToString("yyyy-MM-dd")"
+                       value="@selectedDate?.ToString("yyyy-MM-dd")"
+                       onchange="this.form.submit()" />
+            </div>
+        }
+    </form>
+
+    @if (selectedCampaign != null)
+    {
+        var startDate = (DateTime)selectedCampaign.StartDate;
+        var endDate = (DateTime)selectedCampaign.EndDate;
+        var budget = (decimal)selectedCampaign.Budget;
+        var totalDays = (endDate - startDate).TotalDays + 1;
+        var dailyBudget = totalDays > 0 ? Math.Round(budget / (decimal)totalDays, 2) : 0;
+
+        <div class="card shadow-sm border-info">
+            <div class="card-body">
+                <h5 class="card-title text-info fw-bold">@selectedCampaign.CampaignName</h5>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <strong>Total Budget:</strong> ₹@budget.ToString("N2")
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Daily Budget:</strong> ₹@dailyBudget.ToString("N2")
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Duration:</strong> @startDate.ToShortDateString() to @endDate.ToShortDateString() (@totalDays days)
+                    </li>
+                    @if (selectedDate != null && selectedDate >= startDate && selectedDate <= endDate)
+                    {
+                        var daysElapsed = ((DateTime)selectedDate - startDate).TotalDays + 1;
+                        var spentUntilDate = Math.Round(dailyBudget * (decimal)daysElapsed, 2);
+
+                        <li class="list-group-item text-success fw-bold">
+                            Budget spent until @selectedDate.Value.ToShortDateString(): ₹@spentUntilDate.ToString("N2")
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+    }
+</div>

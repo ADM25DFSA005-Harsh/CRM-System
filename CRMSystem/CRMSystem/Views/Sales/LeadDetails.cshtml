@@ -1,0 +1,512 @@
+﻿@model SalesAutomation.Models.Lead
+ 
+@{
+
+    ViewData["Title"] = "Lead Details";
+
+}
+ 
+@if (TempData["Success"] != null)
+
+{
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+
+        @TempData["Success"]
+<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+}
+ 
+<style>
+
+    #notesContainer {
+
+        justify-content: flex-start; /* Align cards to the left */
+
+    }
+ 
+    #notesContainer .card {
+
+        background-color: #f8f9fa;
+
+        border-radius: 6px;
+
+        font-size: 14px;
+
+    }
+</style>
+ 
+<div class="container-fluid mt-3">
+<div class="row">
+<!-- Left Column: Tabs -->
+<div class="col-md-8">
+<ul class="nav nav-tabs mb-3" id="leadTabs" role="tablist">
+<li class="nav-item">
+<button class="nav-link active" data-bs-toggle="tab" data-bs-target="#email">
+<i class="fa fa-envelope"></i> Emails
+</button>
+</li>
+<li class="nav-item">
+<button class="nav-link" data-bs-toggle="tab" data-bs-target="#calls">
+<i class="fa fa-phone"></i> Calls
+</button>
+</li>
+<li class="nav-item">
+<button class="nav-link" data-bs-toggle="tab" data-bs-target="#notes">
+<i class="fa fa-sticky-note"></i> Notes
+</button>
+</li>
+<li class="nav-item">
+<button class="nav-link" data-bs-toggle="tab" data-bs-target="#tasks">
+<i class="fa fa-tasks"></i> Tasks
+</button>
+</li>
+</ul>
+ 
+            <div class="tab-content">
+<!-- Emails Tab -->
+<div class="tab-pane fade show active" id="email" role="tabpanel">
+<div class="form-group">
+<label for="emailTitle">Email Title</label>
+<input type="text" id="emailTitle" class="form-control mb-2" placeholder="Enter email title" />
+</div>
+<div class="form-group">
+<label for="emailBody">Email Body</label>
+<textarea id="emailBody" class="form-control mb-2" rows="3" placeholder="Type your email here"></textarea>
+</div>
+<button id="sendEmailBtn" class="btn btn-primary">Send Email</button>
+ 
+                    <hr />
+<h6>Email History:</h6>
+<ul id="emailHistory">
+
+                        @if (!string.IsNullOrEmpty(Model.EmailHistory))
+
+                        {
+
+                            foreach (var log in Model.EmailHistory.Split('|'))
+
+                            {
+<li>@log</li>
+
+                            }
+
+                        }
+</ul>
+</div>
+ 
+                <!-- Calls Tab -->
+<div class="tab-pane fade" id="calls" role="tabpanel">
+<button id="makeCallBtn" class="btn btn-dark mb-4"> + Make a Call</button>
+ 
+                    <div class="form-group">
+<label for="callTitle">Call Title</label>
+<input type="text" id="callTitle" class="form-control mb-2" placeholder="Enter call title" />
+</div>
+<button id="saveCallBtn" class="btn btn-primary">Save Call Log</button>
+ 
+                    <hr />
+<h6>Call History:</h6>
+<ul id="callHistory">
+
+                        @if (!string.IsNullOrEmpty(Model.CallHistory))
+
+                        {
+
+                            foreach (var log in Model.CallHistory.Split('|'))
+
+                            {
+<li>@log</li>
+
+                            }
+
+                        }
+</ul>
+</div>
+ 
+                <!-- Notes Tab -->
+<div class="tab-pane fade" id="notes" role="tabpanel">
+<div class="form-group">
+<label for="noteTitle">Note Title</label>
+<input type="text" id="noteTitle" class="form-control mb-2" placeholder="Enter note title" />
+</div>
+<div class="form-group">
+<label for="noteBody">Note Body</label>
+<textarea id="noteBody" class="form-control mb-2" rows="4" placeholder="Type your note here"></textarea>
+</div>
+<button id="saveNoteBtn" class="btn btn-primary">Save Note</button>
+ 
+                    <hr />
+<h6>Notes:</h6>
+<div id="notesContainer" class="d-flex flex-wrap gap-3">
+
+                        @if (!string.IsNullOrEmpty(Model.Notes))
+
+                        {
+
+                            foreach (var note in Model.Notes.Split('|'))
+
+                            {
+<div class="card p-2 mb-2 shadow-sm" style="width: 220px; word-wrap: break-word;">
+
+                                    @Html.Raw(note)
+</div>
+
+                            }
+
+                        }
+</div>
+</div>
+ 
+                <!-- Tasks Tab -->
+<div class="tab-pane fade" id="tasks" role="tabpanel">
+<button class="btn btn-dark mb-3" data-bs-toggle="modal" data-bs-target="#taskModal">+ New Task</button>
+ 
+                    <hr />
+<h6>Tasks:</h6>
+<div id="tasksContainer" class="d-flex flex-wrap gap-3">
+
+                        @if (!string.IsNullOrEmpty(Model.Tasks))
+
+                        {
+
+                            foreach (var task in Model.Tasks.Split('|'))
+
+                            {
+<div class="card p-2 mb-2 shadow-sm" style="width: 220px; word-wrap: break-word;">
+
+                                    @Html.Raw(task)
+</div>
+
+                            }
+
+                        }
+</div>
+</div>
+</div>
+</div>
+
+ 
+        <!-- Right Column: Sidebar -->
+<div class="col-md-4">
+<div class="card">
+<div class="card-body">
+<div class="d-flex justify-content-between align-items-center mb-2">
+<h4 class="mb-0">Lead Details</h4>
+<!-- Pencil Icon for Edit -->
+<a asp-action="Edit" asp-route-id="@Model.LeadID" class"font-size:18px; color:#0d6efd;">
+<i class="fa fa-pencil-alt"></i>
+</a>
+</div>
+<p>
+<strong>Name:</strong> @Model.Salutation @Model.FirstName @Model.LastName <br />
+<strong>Email:</strong> @Model.Email <br />
+<strong>Mobile:</strong> @Model.MobileNumber <br />
+<strong>Region:</strong> @Model.Region <br />
+<strong>Status:</strong> @Model.Status <br />
+<strong>Assigned To:</strong> @Model.AssignedTo
+</p>
+ 
+                    <!-- Convert to Deal Button -->
+
+                    @if (!Model.Status.Equals("Qualified", StringComparison.OrdinalIgnoreCase))
+
+                    {
+<div class="alert alert-warning">
+
+                            Only qualified leads can be converted to deals.
+</div>
+
+                    }
+
+                    else if (ViewBag.IsConverted)
+
+                    {
+<div class="alert alert-info">
+
+                            This lead is already converted to a deal.
+<a href="/Deals/DealsList"></a>
+</div>
+
+                    }
+
+                    else
+
+                    {
+<!-- Convert to Deal form -->
+<form method="post" class="row g-3 mb-4" asp-action="ConvertToDeal">
+<input type="hidden" name="LeadId" value="@Model.LeadID" />
+<div class="mb-3">
+<label>Estimated Value</label>
+<input type="number" name="EstimatedValue" class="form-control" required />
+</div>
+<button type="submit" class="btn btn-success">Convert to Deal</button>
+</form>
+
+                    }
+</div>
+</div>
+</div>
+</div>
+</div>
+ 
+<!-- Task Modal -->
+<div class="modal fade" id="taskModal" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">Create Task</h5>
+<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+</div>
+<div class="modal-body">
+<input type="text" id="taskTitle" class="form-control mb-2" placeholder="Title" />
+<textarea id="taskDesc" class="form-control mb-2" rows="3" placeholder="Description"></textarea>
+<label class="form-label">Select Priority</label>
+<select id="taskPriority" class="form-select mb-2">
+<option value="High">High</option>
+<option value="Medium">Medium</option>
+<option value="Low">Low</option>
+</select>
+<label class="form-label">Due Date</label>
+<input type="date" id="taskDate" class="form-control mb-2" />
+</div>
+<div class="modal-footer">
+<button type="button" id="createTaskBtn" class="btn btn-primary">Create</button>
+</div>
+</div>
+</div>
+</div>
+ 
+ 
+@section Scripts {
+<script>
+
+        function addTask() {
+
+            const title = document.getElementById('taskTitle').value;
+
+            const priority = document.getElementById('taskPriority').value;
+
+            const date = document.getElementById('taskDate').value;
+
+            if (title) {
+
+                const li = document.createElement('li');
+
+                li.innerHTML = `<strong>${title}</strong> - ${priority} (${date})`;
+
+                document.getElementById('taskList').appendChild(li);
+
+                document.getElementById('taskTitle').value = '';
+
+                document.getElementById('taskDesc').value = '';
+
+                document.getElementById('taskDate').value = '';
+
+                var modal = bootstrap.Modal.getInstance(document.getElementById('taskModal'));
+
+                modal.hide();
+
+            }
+
+        }
+</script>
+<script>
+
+        document.querySelector("form").addEventListener("submit", function(e) {
+
+            const value = document.querySelector("[name='EstimatedValue']").value;
+
+            const date = document.querySelector("[name='ExpectedCloseDate']").value;
+
+            if (!value || !date) {
+
+                alert("Please enter Estimated Value and Closing Date before converting.");
+
+                e.preventDefault();
+
+            }
+
+        });
+</script>
+<script>
+
+        $('#sendEmailBtn').click(function () {
+
+            const title = $('#emailTitle').val().trim();
+
+            const body = $('#emailBody').val().trim();
+ 
+            if (!title || !body) {
+
+                alert('Please enter both title and email body.');
+
+                return;
+
+            }
+ 
+            alert('Mail sent successfully!');
+
+            $.post('/Sales/AddEmailLog', { leadId: @Model.LeadID, title: title }, function (data) {
+
+                if (data.success) {
+
+                    $('#emailHistory').html('');
+
+                    data.history.forEach(item => {
+
+                        $('#emailHistory').append('<li>' + item + '</li>');
+
+                    });
+
+                    $('#emailTitle').val('');
+
+                    $('#emailBody').val('');
+
+                }
+
+            });
+
+        });
+</script>
+<script>
+
+                $('#makeCallBtn').click(function () {
+
+            alert('Call made successfully!');
+
+        });
+ 
+        $('#saveCallBtn').click(function () {
+
+            const title = $('#callTitle').val().trim();
+
+            if (!title) {
+
+                alert('Please enter a call title.');
+
+                return;
+
+            }
+ 
+            $.post('/Sales/AddCallLog', { leadId: @Model.LeadID, title: title }, function (data) {
+
+                if (data.success) {
+
+                    $('#callHistory').html('');
+
+                    data.history.forEach(item => {
+
+                        $('#callHistory').append('<li>' + item + '</li>');
+
+                    });
+
+                    $('#callTitle').val('');
+
+                }
+
+            });
+
+        });
+</script>
+<script>
+
+                $('#saveNoteBtn').click(function () {
+
+            const title = $('#noteTitle').val().trim();
+
+            const body = $('#noteBody').val().trim();
+ 
+            if (!title || !body) {
+
+                alert('Please enter both title and note body.');
+
+                return;
+
+            }
+ 
+            $.post('/Sales/AddNoteLog', { leadId: @Model.LeadID, title: title, body: body }, function (data) {
+
+                if (data.success) {
+
+                    $('#notesContainer').html('');
+
+                    data.history.forEach(item => {
+
+                        $('#notesContainer').append('<div class="card p-2 mb-2 shadow-sm">' + item + '</div>');
+
+                    });
+
+                    $('#noteTitle').val('');
+
+                    $('#noteBody').val('');
+
+                }
+
+            });
+
+        });
+</script>
+<script>
+
+                $('#createTaskBtn').click(function () {
+
+            const title = $('#taskTitle').val().trim();
+
+            const desc = $('#taskDesc').val().trim();
+
+            const priority = $('#taskPriority').val();
+
+            const date = $('#taskDate').val();
+ 
+            if (!title || !desc || !priority || !date) {
+
+                alert('Please fill all fields.');
+
+                return;
+
+            }
+ 
+            $.post('/Sales/AddTaskLog', {
+
+                leadId: @Model.LeadID,
+
+                title: title,
+
+                description: desc,
+
+                priority: priority,
+
+                date: date
+
+            }, function (data) {
+
+                if (data.success) {
+
+                    $('#tasksContainer').html('');
+
+                    data.history.forEach(item => {
+
+                        $('#tasksContainer').append('<div class="card p-2 mb-2 shadow-sm" style="width:220px;">' + item + '</div>');
+
+                    });
+
+                    $('#taskTitle').val('');
+
+                    $('#taskDesc').val('');
+
+                    $('#taskDate').val('');
+
+                    var modal = bootstrap.Modal.getInstance(document.getElementById('taskModal'));
+
+                    modal.hide();
+
+                }
+
+            });
+
+        });
+</script>
+
+}
+ 

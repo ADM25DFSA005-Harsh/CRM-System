@@ -1,0 +1,50 @@
+﻿@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+
+@{
+    var isAuthenticated = HttpContextAccessor.HttpContext?.User?.Identity?.IsAuthenticated ?? false;
+
+    if (!isAuthenticated)
+    {
+        <script>
+            window.location.href = '/Identity/Account/Login';
+        </script>
+    }
+
+    Layout = "_Layout";
+    Context.Response.Headers.Append("Cache-Control", "no-cache, no-store, must-revalidate");
+    Context.Response.Headers.Append("Pragma", "no-cache");
+    Context.Response.Headers.Append("Expires", "0");
+}
+
+
+@{
+    ViewData["Title"] = "CRM Role Dashboard";
+}
+
+<h2>Welcome to the CRM Role-Based Dashboard</h2>
+
+<!-- Instructions -->
+<p>Select a module to access:</p>
+
+<!-- Module links for Admin and Manager -->
+
+<ul>
+    <li>
+        <a  asp-controller="CustomerProfile" asp-action="CustomerProfile">👤 Customer Module</a>
+    </li>
+    <li>
+        <a asp-controller="Sales" asp-action="SalesOverview">💼 Sales Module</a>
+    </li>
+    <li>
+        <a asp-controller="CustomerSupport" asp-action="DisplayInTableForm">🛠 Support Module</a>
+    </li>
+    <li>
+        <a asp-controller="Campaign" asp-action="Index">📣 Marketing Module</a>
+    </li>
+    <li>
+    <a asp-controller="Report" asp-action="ModuleReport">📊 Report Module</a>
+</li>
+</ul>
+<!-- Viva explanation -->
+<p><strong>Note:</strong> This dashboard is only visible to users with <code>Admin</code> or <code>Manager</code> roles. Other users are redirected to their respective modules automatically after login.</p>

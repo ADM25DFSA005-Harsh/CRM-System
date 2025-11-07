@@ -1,0 +1,85 @@
+﻿@model MarketingAutomation.Models.Campaign
+@{
+    ViewData["Title"] = "Create Campaign";
+}
+
+<div class="container mt-5">
+    <h2 class="text-center fw-bold mb-4">Create New Campaign</h2>
+
+    @Html.ValidationSummary(true, "", new { @class = "text-danger mb-3" })
+
+    <form asp-action="Create" method="post">
+        @Html.AntiForgeryToken()
+
+        <div class="mb-3">
+            <label asp-for="CampaignName" class="form-label"></label>
+            <input asp-for="CampaignName" class="form-control" />
+            <span asp-validation-for="CampaignName" class="text-danger"></span>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label asp-for="StartDate" class="form-label"></label>
+                <input asp-for="StartDate" class="form-control" type="datetime-local" />
+                <span asp-validation-for="StartDate" class="text-danger"></span>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label asp-for="EndDate" class="form-label"></label>
+                <input asp-for="EndDate" class="form-control" type="datetime-local" />
+                <span asp-validation-for="EndDate" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Type" class="form-label"></label>
+            <select asp-for="Type" class="form-select">
+                <option value="">-- Select Type --</option>
+                <option>Email Campaign</option>
+                <option>SMS Campaign</option>
+                <option>Social Media Campaign</option>
+                <option>Push Notification</option>
+                <option>In-App Messaging</option>
+                <option>WhatsApp Campaign</option>
+                <option>Voice Call Campaign</option>
+                <option>Web Pop-Up / Banner</option>
+                <option>Direct Mail</option>
+                <option>Chatbot Campaign</option>
+                <option>Video Campaign</option>
+                <option>Event-Based Campaign</option>
+            </select>
+            <span asp-validation-for="Type" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Status" class="form-label"></label>
+            <select asp-for="Status" class="form-select">
+                <option value="">-- Select Status --</option>
+                <option>Scheduled</option>
+                <option>Active</option>
+                <option>Completed</option>
+            </select>
+            <span asp-validation-for="Status" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Budget" class="form-label"></label>
+            <input asp-for="Budget" class="form-control" type="number" step="0.01" />
+            <span asp-validation-for="Budget" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="ScheduleType" class="form-label"></label>
+            <select asp-for="ScheduleType" class="form-select">
+                <option value="">-- Select Schedule Type --</option>
+                <option>One-time</option>
+                <option>Recurring</option>
+                <option>Event-based</option>
+            </select>
+            <span asp-validation-for="ScheduleType" class="text-danger"></span>
+        </div>
+
+        <div class="d-flex justify-content-center mt-4">
+            <button type="submit" class="btn btn-success px-5">Create Campaign</button>
+        </div>
+    </form>
+</div>

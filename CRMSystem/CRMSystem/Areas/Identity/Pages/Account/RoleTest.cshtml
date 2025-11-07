@@ -1,0 +1,78 @@
+﻿@page
+@using Microsoft.AspNetCore.Identity
+@inject UserManager<IdentityUser> UserManager
+
+@{
+    ViewData["Title"] = "Role-Based Dashboard";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"]</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Welcome to CRM Dashboard</h2>
+
+        @* Check if user is logged in *@
+        @if (User.Identity.IsAuthenticated)
+        {
+            var user = await UserManager.GetUserAsync(User);
+
+            if (user != null)
+            {
+                var roles = await UserManager.GetRolesAsync(user);
+
+                <p>Hello, <strong>@user.UserName</strong>!</p>
+                <p>Your role(s): <strong>@string.Join(", ", roles)</strong></p>
+
+                <hr />
+
+                @* Admin and Manager can choose modules *@
+                @if (roles.Contains("Admin") || roles.Contains("Manager"))
+                {
+                    <h4>Select a module to access:</h4>
+                    <ul>
+                        <li><a>/Report/IndexReport Module</a></li>
+                        <li><a>/Sales/IndexSales Module</a></li>
+                        <li><a>/Marketing/IndexMarketing Module</a></li>
+                        <li><a>/Support/IndexSupport Module</a></li>
+                    </ul>
+                }
+                else
+                {
+                    @* Redirect other roles to their module using JavaScript *@
+                    <script>
+                        @if (roles.Contains("SalesAssociate"))
+                        {
+                            <text>window.location.href = '/Sales/Index';</text>
+                        }
+                        else if (roles.Contains("MarketingAssociate"))
+                        {
+                            <text>window.location.href = '/Marketing/Index';</text>
+                        }
+                        else if (roles.Contains("SupportAgent"))
+                        {
+                            <text>window.location.href = '/Support/Index';</text>
+                        }
+                        else
+                        {
+                            <text>alert('You do not have access to any modules.');</text>
+                        }
+                    </script>
+                }
+            }
+            else
+            {
+                <p>Error: Unable to load user information.</p>
+            }
+        }
+        else
+        {
+            <p>You are not logged in.</p>
+        }
+    </div>
+</body>
+</html>

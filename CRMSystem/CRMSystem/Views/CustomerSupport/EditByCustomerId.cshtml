@@ -1,0 +1,33 @@
+﻿@model CRMProject.Models.SupportTicket
+@{
+    ViewData["Title"] = "Edit Ticket";
+}
+
+<h2>Edit Support Ticket</h2>
+
+<form asp-action="EditByCustomerId" method="post" class="p-3 border rounded bg-light">
+    @Html.AntiForgeryToken()
+    <input type="hidden" asp-for="CustomerID" />
+
+    <div class="mb-3">
+        <label asp-for="Issue" class="form-label"></label>
+        <textarea asp-for="Issue" class="form-control"></textarea>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="AssignedAgent" class="form-label"></label>
+        <input asp-for="AssignedAgent" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Status" class="form-label"></label>
+        <select asp-for="Status" class="form-control">
+            <option>Open</option>
+            <option>Pending</option>
+            <option>Resolved</option>
+            <option>Closed</option>
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Update Ticket</button>
+</form>
